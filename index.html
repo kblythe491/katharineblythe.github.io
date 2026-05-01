@@ -3,16 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Invisible Work Method | Katharine Blythe</title>
-  <meta name="description" content="The Invisible Work Method helps women with significant career gaps understand what their years away actually built — and how to translate it into resume language that works.">
-  <link rel="canonical" href="https://katharineblythe.com/">
+  <title>About Katharine Blythe | The Invisible Work Method</title>
+  <meta name="description" content="About Katharine Blythe and The Invisible Work Method — a practical framework for women returning to paid work after a significant career break.">
+  <link rel="canonical" href="https://katharineblythe.com/about">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://katharineblythe.com/">
-  <meta property="og:title" content="The Invisible Work Method | Katharine Blythe">
-  <meta property="og:description" content="The Invisible Work Method helps women with significant career gaps understand what their years away actually built — and how to translate it into resume language that works.">
+  <meta property="og:url" content="https://katharineblythe.com/about">
+  <meta property="og:title" content="About Katharine Blythe | The Invisible Work Method">
+  <meta property="og:description" content="About Katharine Blythe and The Invisible Work Method — a practical framework for women returning to paid work after a significant career break.">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="The Invisible Work Method | Katharine Blythe">
-  <meta name="twitter:description" content="The Invisible Work Method helps women with significant career gaps understand what their years away actually built — and how to translate it into resume language that works.">
+  <meta name="twitter:title" content="About Katharine Blythe | The Invisible Work Method">
+  <meta name="twitter:description" content="About Katharine Blythe and The Invisible Work Method — a practical framework for women returning to paid work after a significant career break.">
+  <!-- Google Analytics — replace G-DRH7QNRRG6 with your Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DRH7QNRRG6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DRH7QNRRG6');
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
@@ -47,9 +55,8 @@
       text-decoration: none;
       font-size: 1rem;
       font-weight: 400;
-      flex-shrink: 0;
     }
-    .nav-links { display: flex; gap: 1.75rem; list-style: none; align-items: center; flex-wrap: wrap; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
     .nav-links a {
       color: rgba(255,255,255,0.62);
       text-decoration: none;
@@ -67,28 +74,84 @@
     }
     .nav-links .nav-cta:hover { background: var(--hover); color: var(--white); }
 
-    /* ── SHARED ────────────────────────────────────────── */
+    /* ── PAGE HEADER ───────────────────────────────────── */
+    .page-header {
+      background: var(--primary);
+      color: var(--white);
+      text-align: center;
+      padding: 4.5rem 1.5rem 3.5rem;
+    }
     .eyebrow {
       font-size: 0.68rem;
       letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--accent);
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .page-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4.5vw, 3rem);
+      font-weight: 400;
+      line-height: 1.18;
+      max-width: 580px;
+      margin: 0 auto;
     }
 
-    .section-label {
-      font-size: 0.65rem;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
+    /* ── BODY ──────────────────────────────────────────── */
+    .about-body {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem 5rem;
+    }
+
+    .disclosure {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      line-height: 1.85;
+      color: var(--soft);
+      font-style: italic;
+    }
+
+    .about-body p {
+      font-size: 0.97rem;
+      line-height: 1.95;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+    }
+    .about-body p:last-of-type { margin-bottom: 2.5rem; }
+
+    .about-lone {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-style: italic;
       color: var(--accent);
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-brand-line {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: var(--primary);
+      font-weight: 400;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+
+    .about-h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 0.75rem;
     }
 
     .btn-primary {
       background: var(--accent);
       color: var(--white);
       border: none;
-      padding: 1.05rem 2.5rem;
+      padding: 1rem 2.5rem;
       font-size: 0.91rem;
       font-family: 'Inter', sans-serif;
       font-weight: 500;
@@ -100,397 +163,27 @@
     }
     .btn-primary:hover { background: var(--hover); }
 
-    .btn-secondary {
-      background: transparent;
-      color: var(--accent);
-      border: 1.5px solid var(--accent);
-      padding: 1rem 2.25rem;
-      font-size: 0.88rem;
-      font-family: 'Inter', sans-serif;
-      font-weight: 500;
-      letter-spacing: 0.05em;
-      cursor: pointer;
-      transition: all 0.2s;
-      text-decoration: none;
-      display: inline-block;
-    }
-    .btn-secondary:hover { background: var(--accent); color: var(--white); }
-
-    .btn-secondary-white {
-      background: transparent;
-      color: rgba(255,255,255,0.75);
-      border: 1.5px solid rgba(255,255,255,0.35);
-      padding: 1rem 2.25rem;
-      font-size: 0.88rem;
-      font-family: 'Inter', sans-serif;
-      font-weight: 500;
-      letter-spacing: 0.05em;
-      cursor: pointer;
-      transition: all 0.2s;
-      text-decoration: none;
-      display: inline-block;
-    }
-    .btn-secondary-white:hover { border-color: var(--white); color: var(--white); }
-
-    .btn-row {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .divider { height: 1px; background: var(--border); max-width: 680px; margin: 0 auto; }
-    .divider-full { height: 1px; background: var(--border); }
-
-    /* ── HERO ──────────────────────────────────────────── */
-    .hero {
-      background: var(--primary);
-      color: var(--white);
-      text-align: center;
-      padding: 6rem 1.5rem 5.5rem;
-    }
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.9rem, 5.5vw, 3.4rem);
-      line-height: 1.18;
-      font-weight: 400;
-      margin-bottom: 1.5rem;
-      max-width: 720px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .hero .lead {
-      font-size: clamp(0.95rem, 2vw, 1.08rem);
-      line-height: 1.85;
-      color: rgba(255,255,255,0.65);
-      max-width: 540px;
-      margin: 0 auto 2.75rem;
-      font-weight: 300;
-    }
-    .hero-meta {
-      margin-top: 1.25rem;
-      font-size: 0.73rem;
-      color: rgba(255,255,255,0.28);
-      letter-spacing: 0.08em;
-    }
-
-    /* ── BODY SECTIONS ─────────────────────────────────── */
-    .section {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 4.5rem 1.5rem;
-    }
-    .section h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.45rem, 3.2vw, 2rem);
-      color: var(--primary);
-      margin-bottom: 1.25rem;
-      font-weight: 400;
-      line-height: 1.32;
-    }
-    .section p {
-      font-size: 0.97rem;
-      line-height: 1.9;
-      color: var(--text);
-      margin-bottom: 1.1rem;
-    }
-    .section p:last-of-type { margin-bottom: 0; }
-
-    /* ── HONEST SECTION (dark bg) ──────────────────────── */
-    .honest-section {
-      background: var(--primary);
-      color: var(--white);
-      padding: 4.5rem 1.5rem;
-      text-align: center;
-    }
-    .honest-section h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.45rem, 3.2vw, 2rem);
-      font-weight: 400;
-      margin-bottom: 2rem;
-      line-height: 1.3;
-    }
-    .honest-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.25rem;
-      max-width: 640px;
-      margin: 0 auto 2.5rem;
-    }
-    .honest-card {
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-top: 3px solid var(--accent);
-      border-radius: 2px;
-      padding: 1.75rem 1.5rem;
-      text-align: left;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.28), 0 1px 6px rgba(0,0,0,0.18);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .honest-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.38), 0 2px 8px rgba(0,0,0,0.22);
-    }
-    .honest-card .label {
-      font-size: 0.62rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.85rem;
-      display: block;
-    }
-    .honest-card p {
-      font-size: 0.91rem;
-      line-height: 1.78;
-      color: rgba(255,255,255,0.78);
-    }
-    @media (max-width: 480px) {
-      .honest-grid {
-        grid-template-columns: 1fr;
-        max-width: 440px;
-      }
-    }
-
-    /* ── FIND GRID ─────────────────────────────────────── */
-    .find-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
-      gap: 1.25rem;
-      margin-top: 1.75rem;
-      margin-bottom: 2.25rem;
-    }
-    .find-card {
-      background: var(--card);
-      padding: 1.5rem 1.4rem;
-      border-top: 3px solid var(--accent);
-    }
-    .find-card h4 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem;
-      color: var(--primary);
-      font-weight: 400;
-      margin-bottom: 0.6rem;
-    }
-    .find-card p {
-      font-size: 0.88rem;
-      line-height: 1.72;
-      color: var(--text);
-      margin: 0;
-    }
-
-    /* ── BEFORE/AFTER ──────────────────────────────────── */
-    .before-after-section {
-      background: var(--card);
-      padding: 4.5rem 1.5rem;
-    }
-    .before-after-inner {
-      max-width: 680px;
-      margin: 0 auto;
-    }
-    .before-after-inner h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.45rem, 3.2vw, 2rem);
-      color: var(--primary);
-      margin-bottom: 1rem;
-      font-weight: 400;
-      line-height: 1.32;
-    }
-    .before-after-inner > p {
-      font-size: 0.97rem;
-      line-height: 1.9;
-      color: var(--text);
-      margin-bottom: 2.5rem;
-    }
-    .example {
-      margin-bottom: 2rem;
-      padding-bottom: 2rem;
-      border-bottom: 1px solid var(--border);
-    }
-    .example:last-of-type { border-bottom: none; margin-bottom: 1.5rem; }
-    .example-label {
-      font-size: 0.62rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--text);
-      font-weight: 600;
-      margin-bottom: 1rem;
-    }
-    .before-after-pair {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-    .ba-box {
-      padding: 1.1rem 1.2rem;
-      font-size: 0.9rem;
-      line-height: 1.72;
-    }
-    .ba-box.before {
-      background: var(--white);
-      border-left: 3px solid var(--soft);
-      color: #9A8580;
-      font-style: italic;
-    }
-    .ba-box.after {
-      background: var(--white);
-      border-left: 3px solid var(--accent);
-      color: var(--text);
-    }
-    .ba-tag {
-      font-size: 0.6rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      margin-bottom: 0.5rem;
-      font-weight: 500;
-      font-style: normal;
-    }
-    .ba-tag.before-tag { color: var(--soft); }
-    .ba-tag.after-tag { color: var(--accent); }
-
-    /* ── FREE GUIDE SECTION ────────────────────────────── */
-    .guide-section {
-      background: var(--bg);
-      padding: 4.5rem 1.5rem;
-      text-align: center;
-    }
-    .guide-inner {
-      max-width: 520px;
-      margin: 0 auto;
-    }
-    .guide-inner h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.45rem, 3.2vw, 2rem);
-      color: var(--primary);
-      margin-bottom: 1rem;
-      font-weight: 400;
-      line-height: 1.32;
-    }
-    .guide-inner p {
-      font-size: 0.95rem;
-      line-height: 1.85;
-      color: var(--text);
-      margin-bottom: 1.75rem;
-    }
-    .guide-form {
-      display: flex;
-      gap: 0.5rem;
-      max-width: 440px;
-      margin: 0 auto 0.85rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .guide-form input[type="email"] {
-      flex: 1;
-      min-width: 210px;
-      padding: 0.85rem 1rem;
-      border: 1.5px solid var(--border);
-      font-size: 0.91rem;
-      font-family: 'Inter', sans-serif;
-      background: var(--white);
-      outline: none;
-      color: var(--text);
-    }
-    .guide-form input[type="email"]:focus { border-color: var(--accent); }
-    .guide-form button {
-      background: var(--primary);
-      color: var(--white);
-      border: none;
-      padding: 0.85rem 1.5rem;
-      font-family: 'Inter', sans-serif;
-      font-weight: 500;
-      font-size: 0.88rem;
-      cursor: pointer;
-      white-space: nowrap;
-      transition: background 0.2s;
-    }
-    .guide-form button:hover { background: var(--hover); }
-    .guide-privacy {
-      font-size: 0.7rem;
-      color: var(--soft);
-      margin-bottom: 0 !important;
-    }
-
-    /* ── CLOSING CTA ───────────────────────────────────── */
-    .cta-band {
-      background: var(--primary);
-      color: var(--white);
-      text-align: center;
-      padding: 5rem 1.5rem;
-    }
-    .cta-band h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.5rem, 3.5vw, 2.3rem);
-      font-weight: 400;
-      margin-bottom: 1rem;
-      line-height: 1.2;
-    }
-    .cta-band p {
-      color: rgba(255,255,255,0.58);
-      font-size: 0.95rem;
-      max-width: 420px;
-      margin: 0 auto 2.25rem;
-      line-height: 1.8;
-    }
-
     /* ── FOOTER ────────────────────────────────────────── */
     .site-footer {
       background: var(--text);
       color: rgba(255,255,255,0.32);
-      padding: 2.5rem 2rem 2rem;
-      font-size: 0.78rem;
-    }
-    .footer-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding-bottom: 1.75rem;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-      margin-bottom: 1.25rem;
-    }
-    .footer-brand {
-      font-family: 'Playfair Display', serif;
-      color: rgba(255,255,255,0.55);
-      font-size: 1rem;
-      font-weight: 400;
-    }
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem 1.5rem;
-      list-style: none;
-    }
-    .footer-links a {
-      color: rgba(255,255,255,0.38);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .footer-links a:hover { color: rgba(255,255,255,0.7); }
-    .footer-copy {
       text-align: center;
-      font-size: 0.72rem;
-      color: rgba(255,255,255,0.25);
-      line-height: 1.8;
+      padding: 1.75rem 1.5rem;
+      font-size: 0.74rem;
+      letter-spacing: 0.04em;
+      line-height: 1.9;
     }
-    .footer-copy a { color: rgba(255,255,255,0.32); text-decoration: none; }
-    .footer-copy a:hover { color: rgba(255,255,255,0.6); }
+    .site-footer a { color: rgba(255,255,255,0.42); text-decoration: none; }
+    .site-footer a:hover { color: rgba(255,255,255,0.72); }
 
-    @media (max-width: 600px) {
-      .site-nav { padding: 1rem 1.25rem; gap: 1rem; }
-      .nav-links { gap: 1rem; }
-      .hero { padding: 4rem 1.25rem 4rem; }
-      .before-after-pair { grid-template-columns: 1fr; }
-.btn-row { flex-direction: column; align-items: flex-start; }
+    @media (max-width: 480px) {
+      .site-nav { padding: 1rem 1.25rem; }
+      .nav-links { gap: 1.25rem; }
     }
   </style>
 </head>
 <body>
 
-<!-- ── NAV ──────────────────────────────────────────────── -->
 <nav class="site-nav">
   <a href="/" class="nav-brand">Katharine Blythe</a>
   <ul class="nav-links">
@@ -499,161 +192,69 @@
   </ul>
 </nav>
 
-
-<!-- ── HERO ─────────────────────────────────────────────── -->
-<section class="hero">
+<div class="page-header">
   <p class="eyebrow">The Invisible Work Method</p>
-  <h1>Your career break has a story. Your resume may not know how to tell it yet.</h1>
-  <p class="lead">The years you spent away from paid work were not empty. But not every experience translates the same way. The Invisible Work Quiz helps you see what your years away actually built — and whether your next step is translation, a bridge, or both.</p>
-  <a href="/invisible-work" class="btn-primary">Take the Invisible Work Quiz — Free</a>
-  <p class="hero-meta">9 questions &nbsp;·&nbsp; 2 minutes &nbsp;·&nbsp; Clear next step</p>
-</section>
-
-
-<!-- ── SECTION 1: WHO THIS IS FOR ───────────────────────── -->
-<div class="section">
-<h2>For women who have been working the whole time.</h2>
-  <p>You raised children, cared for family, built things, volunteered, taught, organized, navigated systems nobody thanked you for. You kept more moving than anyone counted.</p>
-  <p>The professional world does not always know how to read that. It is a translation problem — and it is solvable.</p>
+  <h1>About Katharine Blythe</h1>
 </div>
 
-<div class="divider"></div>
+<div class="about-body">
 
+  <p>The Invisible Work Method began with a career gap.</p>
 
-<!-- ── SECTION 2: THE HONEST PART ───────────────────────── -->
-<div class="honest-section">
-  <h2>Not every career break needs the same next step.</h2>
-  <div class="honest-grid">
-    <div class="honest-card">
-      <span class="label">You have the experience.<br>Now you need the language.</span>
-      <p>What you did during your time away is more transferable than you think. The work is learning how to say it in language a hiring manager recognizes.</p>
-    </div>
-    <div class="honest-card">
-      <span class="label">You have the years.<br>Now you need one thing on paper.</span>
-      <p>Your gap may be too significant to bridge with language alone. One bridge step — a volunteer role, short contract, or certification — will get you there faster.</p>
-    </div>
+  <p class="about-lone">Mine.</p>
+
+  <p>I stayed home after the birth of my first child, and I did not return to paid work for a long time.</p>
+
+  <p>During those years, I was busy. I love learning, and I like to stay active, so I kept finding ways to use my mind and my energy. I taught in community settings, organized local initiatives, supported people, upgraded my own skills, and helped make things happen.</p>
+
+  <p>At the time, I considered much of it useful, meaningful, and fun. I did not think of it as work.</p>
+
+  <p>Then I suddenly found myself needing to return to the workforce quickly, and I realized I had been carrying responsibility, managing complexity, supporting people, solving problems, and organizing moving pieces for years. None of it came with a job description, formal metrics, or a paycheck, but I assumed — naively — that it could be easily explained.</p>
+
+  <p>I carried a lot of confidence into that early job search.</p>
+
+  <p>I learned quickly that a career gap is not solved by confidence alone.</p>
+
+  <p>You cannot pretend the gap does not matter. It does. And it is not always solved by listing volunteer work on a resume and hoping someone understands what it means.</p>
+
+  <p>Now that I sit in the hiring chair, I understand why.</p>
+
+  <p>When I see an applicant with a significant gap, I slow down. I look for the thread. I look for the reason to invite that person into a conversation.</p>
+
+  <p>But too often, the resume does not give me enough to work with.</p>
+
+  <p>Not because the work was not real. Not because the skills are not there. But because the experience has not been translated into language that makes the person's readiness clear.</p>
+
+  <p>And even when I can find a reason to bring the person in for an interview, the same problem can continue. The experience is there, but the person does not yet have the words to speak about it clearly, confidently, and in a way that connects to the role in front of them.</p>
+
+  <p>That is why The Invisible Work Method exists.</p>
+
+  <p>It is not about pretending a career gap does not matter. It can raise fair questions about recency, readiness, direction, and proof.</p>
+
+  <p>But a gap should not be the only thing a resume says about you.</p>
+
+  <p>Some experience is ready to translate. Some experience needs stronger language. And sometimes the most strategic next step is one recent, external proof point — a volunteer project with clear scope, a certification, an internship, a returnship, a short contract, or a portfolio piece.</p>
+
+  <p>The point is not to inflate what you did. The point is to understand what your experience can already prove, what it still needs, and how to make the strongest possible case for your return.</p>
+
+  <p>Just because life had other plans for you — or because you made a choice that made sense at the time — does not mean you should spend the rest of your life paying for that decision.</p>
+
+  <p class="about-brand-line">You are not behind. But we do need to be strategic.</p>
+
+  <a href="/invisible-work" class="btn-primary">Take the Invisible Work Quiz →</a>
+
+  <div class="disclosure">
+    <p class="about-h2">A note on the name</p>
+    Katharine Blythe is a pen name. I use it to keep this work separate from the rest of my professional life, so this project does not include a traditional professional bio or public résumé.
+    <br><br>
+    The story is real. The method is real. The boundary is intentional.
   </div>
+
 </div>
 
-
-<!-- ── SECTION 3: WHAT THE QUIZ GIVES YOU ───────────────── -->
-<div class="section">
-  <h2>More than a result. A direction.</h2>
-  <p>The Invisible Work Quiz is designed to help you understand what kind of experience you have, what your resume may be missing, and what your next move should be.</p>
-  <div class="find-grid">
-    <div class="find-card">
-      <h4>Your Invisible Work Archetype</h4>
-      <p>Find out how you naturally contribute: Builder, Operator, Implementer, Mentor, Advocate, or Maker.</p>
-    </div>
-    <div class="find-card">
-      <h4>Your Resume Path</h4>
-      <p>See whether your experience is ready for the Translation Lane, or whether one Bridge step could make your return stronger.</p>
-    </div>
-    <div class="find-card">
-      <h4>Your Next Move</h4>
-      <p>Gain insight into where you are right now — and a sense of what the right next step might look like for you.</p>
-    </div>
-  </div>
-  <div class="btn-row">
-    <a href="/invisible-work" class="btn-primary">Take the Quiz — Free</a>
-  </div>
-</div>
-
-<!-- ── SECTION 4: BEFORE / AFTER ────────────────────────── -->
-<div class="before-after-section">
-  <div class="before-after-inner">
-    <h2>Invisible work becomes clearer when it is translated.</h2>
-    <p>A career break does not need to be explained with a long personal story. Often, the work is to identify what happened, name the professional skill underneath it, and decide whether the resume has enough proof to support it.</p>
-
-    <div class="example">
-      <p class="example-label">Volunteer Work</p>
-      <div class="before-after-pair">
-        <div class="ba-box before">
-          <p class="ba-tag before-tag">Before</p>
-          "I ran the school fundraiser for three years."
-        </div>
-        <div class="ba-box after">
-          <p class="ba-tag after-tag">After</p>
-          Coordinated the school's annual fundraiser over three years, managing volunteers, event logistics, and day-of operations.
-        </div>
-      </div>
-    </div>
-
-    <div class="example">
-      <p class="example-label">Caregiving and Systems Navigation</p>
-      <div class="before-after-pair">
-        <div class="ba-box before">
-          <p class="ba-tag before-tag">Before</p>
-          "I helped my parent through a difficult medical period."
-        </div>
-        <div class="ba-box after">
-          <p class="ba-tag after-tag">After</p>
-          Managed care coordination across multiple providers over an extended period, including scheduling, insurance communication, and follow-up.
-        </div>
-      </div>
-    </div>
-
-    <div class="example">
-      <p class="example-label">Creative Work</p>
-      <div class="before-after-pair">
-        <div class="ba-box before">
-          <p class="ba-tag before-tag">Before</p>
-          "I ran a small Etsy shop."
-        </div>
-        <div class="ba-box after">
-          <p class="ba-tag after-tag">After</p>
-          Managed end-to-end e-commerce operation including product development, photography, copywriting, customer communication, order fulfillment, and performance tracking.
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-
-<!-- ── SECTION 5: FREE GUIDE EMAIL CAPTURE ───────────────── -->
-<div class="guide-section">
-  <div class="guide-inner">
-    <p class="section-label">Not ready for the quiz yet?</p>
-    <h2>Start with the language.</h2>
-    <p>Get a short guide with real examples of how invisible work becomes resume language — including volunteer work, caregiving, community support, creative work, and long career breaks. Free, and useful whether or not you ever take the quiz.</p>
-    <!-- REPLACE WITH BEEHIIV EMBED — tag: free_guide_signup -->
-    <form class="guide-form" onsubmit="handleGuideEmail(event)">
-      <input type="email" placeholder="Your email address" required autocomplete="email" />
-      <button type="submit">Send Me the Examples</button>
-    </form>
-    <p class="guide-privacy">No spam. Unsubscribe at any time.</p>
-  </div>
-</div>
-
-
-<!-- ── SECTION 6: CLOSING ─────────────────────────────────── -->
-<div class="cta-band">
-  <h2>Wherever you are in this is the right place to start.</h2>
-  <p>You may be at the very beginning — still deciding if coming back is even possible. You may have started applying and hit a wall you cannot quite name. Either way, this method is designed to meet you there.</p>
-</div>
-
-
-<!-- ── FOOTER ─────────────────────────────────────────────── -->
 <footer class="site-footer">
-  <div class="footer-inner">
-    <span class="footer-brand">Katharine Blythe</span>
-    <ul class="footer-links">
-      <li><a href="/">Home</a></li>
-      <li><a href="/invisible-work">Take the Quiz</a></li>
-      <li><a href="/about">About</a></li>
-    </ul>
-  </div>
-  <div class="footer-copy">
-    <p>© 2026 Katharine Blythe. All rights reserved.</p>
-  </div>
+  <p>© 2026 Katharine Blythe &nbsp;·&nbsp; <a href="/">Home</a> &nbsp;·&nbsp; <a href="/invisible-work">Take the Quiz</a> &nbsp;·&nbsp; <a href="/about">About</a></p>
 </footer>
 
-<script>
-function handleGuideEmail(e) {
-  e.preventDefault();
-  e.target.innerHTML = '<p style="color:var(--primary);font-size:1rem;font-weight:500;text-align:center;">You\'re in. Check your inbox shortly.</p>';
-}
-</script>
 </body>
 </html>
