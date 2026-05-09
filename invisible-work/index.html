@@ -13,7 +13,7 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="The Invisible Work Quiz | Katharine Blythe">
   <meta name="twitter:description" content="Take the free Invisible Work Quiz — find your archetype, your resume path, and your clearest next step back to paid work after a career gap.">
-  <!-- Google Analytics — replace G-DRH7QNRRG6 with your Measurement ID -->
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DRH7QNRRG6"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -21,11 +21,12 @@
     gtag('js', new Date());
     gtag('config', 'G-DRH7QNRRG6');
   </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
       --primary:   #3D2636;
       --bg:        #F7EFE6;
@@ -39,9 +40,7 @@
       --lane-t:    #4A2F42;
       --lane-b:    #A98A83;
     }
-
     html { scroll-behavior: smooth; }
-
     body {
       font-family: 'Inter', sans-serif;
       background: var(--bg);
@@ -49,7 +48,7 @@
       min-height: 100vh;
     }
 
-    /* ── NAV ───────────────────────────────────────────── */
+    /* ── NAV ── */
     .site-nav {
       background: var(--primary);
       padding: 1.1rem 2rem;
@@ -63,8 +62,9 @@
       text-decoration: none;
       font-size: 1rem;
       font-weight: 400;
+      flex-shrink: 0;
     }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; align-items: center; flex-wrap: wrap; }
     .nav-links a {
       color: rgba(255,255,255,0.62);
       text-decoration: none;
@@ -73,12 +73,18 @@
       transition: color 0.2s;
     }
     .nav-links a:hover { color: var(--white); }
-    .nav-links .nav-cta { color: var(--accent); }
-    .nav-links .nav-cta:hover { color: var(--white); }
+    .nav-links .nav-cta {
+      color: var(--white);
+      background: var(--accent);
+      padding: 0.45rem 1rem;
+      font-size: 0.8rem;
+      transition: background 0.2s;
+    }
+    .nav-links .nav-cta:hover { background: var(--hover); color: var(--white); }
 
-    /* ── LANDING ─────────────────────────────────────────── */
+    /* ── LANDING ── */
     #landing {
-      min-height: calc(100vh - 52px);
+      min-height: calc(100vh - 58px);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -88,7 +94,6 @@
       background: var(--primary);
       color: var(--white);
     }
-
     .eyebrow {
       font-size: 0.68rem;
       letter-spacing: 0.22em;
@@ -96,7 +101,6 @@
       color: var(--accent);
       margin-bottom: 1.75rem;
     }
-
     #landing h1 {
       font-family: 'Playfair Display', serif;
       font-size: clamp(2rem, 5.5vw, 3.6rem);
@@ -105,7 +109,6 @@
       max-width: 680px;
       font-weight: 400;
     }
-
     #landing .lead {
       font-size: clamp(0.95rem, 2vw, 1.08rem);
       line-height: 1.85;
@@ -114,7 +117,6 @@
       margin-bottom: 2.75rem;
       font-weight: 300;
     }
-
     .btn-primary {
       background: var(--accent);
       color: var(--white);
@@ -128,7 +130,6 @@
       transition: background 0.2s;
     }
     .btn-primary:hover { background: var(--hover); }
-
     .landing-meta {
       margin-top: 1.25rem;
       font-size: 0.73rem;
@@ -136,9 +137,8 @@
       letter-spacing: 0.08em;
     }
 
-    /* ── QUIZ ────────────────────────────────────────────── */
+    /* ── QUIZ ── */
     #quiz { display: none; background: var(--bg); min-height: 100vh; }
-
     .quiz-header {
       background: var(--primary);
       padding: 1.1rem 2rem;
@@ -157,16 +157,13 @@
       font-size: 0.76rem;
       letter-spacing: 0.05em;
     }
-
     .progress-track { height: 3px; background: var(--border); }
     .progress-fill  { height: 100%; background: var(--accent); transition: width 0.35s ease; }
-
     .question-wrapper {
       max-width: 640px;
       margin: 0 auto;
       padding: 3rem 1.5rem 1.5rem;
     }
-
     .q-label {
       font-size: 0.66rem;
       text-transform: uppercase;
@@ -174,7 +171,6 @@
       color: var(--accent);
       margin-bottom: 0.9rem;
     }
-
     .q-transition {
       font-size: 0.82rem;
       color: var(--soft);
@@ -183,7 +179,6 @@
       padding: 0.6rem 0.9rem;
       border-left: 2px solid var(--accent);
     }
-
     .q-text {
       font-family: 'Playfair Display', serif;
       font-size: clamp(1.15rem, 2.8vw, 1.55rem);
@@ -192,14 +187,12 @@
       margin-bottom: 2rem;
       font-weight: 400;
     }
-
     .options {
       list-style: none;
       display: flex;
       flex-direction: column;
       gap: 0.55rem;
     }
-
     .opt {
       background: var(--white);
       border: 1.5px solid var(--border);
@@ -213,7 +206,6 @@
     }
     .opt:hover  { border-color: var(--accent); background: var(--card); }
     .opt.chosen { border-color: var(--primary); background: var(--primary); color: var(--white); }
-
     .quiz-nav {
       display: flex;
       justify-content: space-between;
@@ -222,7 +214,6 @@
       margin: 2rem auto 0;
       padding: 0 1.5rem 3.5rem;
     }
-
     .btn-back {
       background: none;
       border: none;
@@ -235,7 +226,6 @@
       font-family: 'Inter', sans-serif;
     }
     .btn-back:hover { opacity: 0.8; }
-
     .btn-next {
       background: var(--primary);
       color: var(--white);
@@ -251,17 +241,14 @@
     .btn-next:hover:not(:disabled) { background: var(--hover); }
     .btn-next:disabled { opacity: 0.28; cursor: not-allowed; }
 
-    /* ── RESULTS ─────────────────────────────────────────── */
+    /* ── RESULTS ── */
     #results { display: none; background: var(--bg); }
-
     .results-hero {
       background: var(--primary);
       color: var(--white);
       text-align: center;
       padding: 4.5rem 1.5rem 3.5rem;
-      position: relative;
     }
-
     .badge-row {
       display: flex;
       justify-content: center;
@@ -269,7 +256,6 @@
       margin-bottom: 1.4rem;
       flex-wrap: wrap;
     }
-
     .archetype-badge, .lane-badge {
       display: inline-block;
       padding: 0.28rem 0.85rem;
@@ -277,17 +263,10 @@
       font-weight: 500;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      border-radius: 0;
     }
-
-    .archetype-badge {
-      background: var(--archetype-color, var(--accent));
-      color: var(--white);
-    }
-
+    .archetype-badge { background: var(--archetype-color, var(--accent)); color: var(--white); }
     .lane-badge-t { background: var(--lane-t); color: var(--white); }
     .lane-badge-b { background: var(--lane-b); color: var(--white); }
-
     .results-hero h2 {
       font-family: 'Playfair Display', serif;
       font-size: clamp(2rem, 5vw, 3rem);
@@ -304,13 +283,11 @@
       font-style: italic;
       font-family: 'Playfair Display', serif;
     }
-
     .results-body {
       max-width: 640px;
       margin: 0 auto;
       padding: 3.5rem 1.5rem;
     }
-
     .result-block {
       margin-bottom: 2.75rem;
       padding-left: 1.1rem;
@@ -328,7 +305,6 @@
       line-height: 1.9;
       color: var(--text);
     }
-
     .next-move {
       background: var(--card);
       padding: 2.5rem 2rem;
@@ -361,7 +337,7 @@
     }
     .btn-kit:hover { background: var(--hover); }
 
-    /* ── EMAIL ───────────────────────────────────────────── */
+    /* ── EMAIL SECTION ── */
     .email-section {
       background: var(--primary);
       padding: 4rem 1.5rem;
@@ -377,15 +353,14 @@
     .email-section p {
       color: rgba(255,255,255,0.55);
       font-size: 0.9rem;
-      max-width: 400px;
+      max-width: 420px;
       margin: 0 auto 1.75rem;
       line-height: 1.75;
     }
-
     .email-form {
       display: flex;
       gap: 0.5rem;
-      max-width: 420px;
+      max-width: 440px;
       margin: 0 auto;
       flex-wrap: wrap;
       justify-content: center;
@@ -416,14 +391,34 @@
       transition: background 0.2s;
     }
     .email-form button:hover { background: var(--hover); }
-
+    .email-bonus-list {
+      list-style: none;
+      margin: 0 auto 1.75rem;
+      max-width: 380px;
+      text-align: left;
+    }
+    .email-bonus-list li {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.62);
+      padding: 0.3rem 0;
+      padding-left: 1.25rem;
+      position: relative;
+      line-height: 1.6;
+    }
+    .email-bonus-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 0.8rem;
+    }
     .privacy {
       font-size: 0.7rem;
       color: rgba(255,255,255,0.25);
       margin-top: 0.9rem;
     }
 
-    /* ── FOOTER ──────────────────────────────────────────── */
+    /* ── FOOTER ── */
     .site-footer {
       background: var(--text);
       color: rgba(255,255,255,0.32);
@@ -438,7 +433,7 @@
 
     @media (max-width: 480px) {
       .site-nav { padding: 1rem 1.25rem; }
-      .nav-links { gap: 1.25rem; }
+      .nav-links { gap: 1rem; }
       .quiz-nav { flex-direction: column-reverse; gap: 1rem; }
       .btn-next { width: 100%; text-align: center; }
     }
@@ -446,16 +441,18 @@
 </head>
 <body>
 
-<!-- ── NAV ──────────────────────────────────────────────── -->
+<!-- ── NAV ── -->
 <nav class="site-nav">
   <a href="/" class="nav-brand">Katharine Blythe</a>
   <ul class="nav-links">
     <li><a href="/about">About</a></li>
+    <li><a href="/resume-kit">Resume Kit</a></li>
+    <li><a href="/bridge-path">Bridge Path</a></li>
     <li><a href="/invisible-work" class="nav-cta">Take the Quiz</a></li>
   </ul>
 </nav>
 
-<!-- ── LANDING ──────────────────────────────────────────── -->
+<!-- ── LANDING ── -->
 <section id="landing">
   <p class="eyebrow">The Invisible Work Quiz</p>
   <h1>Your career break has a story.</h1>
@@ -464,8 +461,7 @@
   <p class="landing-meta">9 questions &nbsp;·&nbsp; 2 minutes &nbsp;·&nbsp; Clear next step</p>
 </section>
 
-
-<!-- ── QUIZ ────────────────────────────────────────────── -->
+<!-- ── QUIZ ── -->
 <section id="quiz">
   <div class="quiz-header">
     <span class="quiz-brand">Katharine Blythe</span>
@@ -474,22 +470,19 @@
   <div class="progress-track">
     <div class="progress-fill" id="progress-fill" style="width:10%"></div>
   </div>
-
   <div class="question-wrapper">
     <p class="q-label" id="q-label">Question 1</p>
     <p class="q-transition" id="q-transition" style="display:none"></p>
     <h2 class="q-text" id="q-text"></h2>
     <ul class="options" id="options"></ul>
   </div>
-
   <div class="quiz-nav">
     <button class="btn-back" id="btn-back" onclick="prevQ()">← Back</button>
     <button class="btn-next" id="btn-next" onclick="nextQ()" disabled>Continue →</button>
   </div>
 </section>
 
-
-<!-- ── RESULTS ──────────────────────────────────────────── -->
+<!-- ── RESULTS ── -->
 <section id="results">
   <div class="results-hero">
     <div class="badge-row">
@@ -499,7 +492,6 @@
     <h2 id="r-title"></h2>
     <p class="tagline" id="r-tagline"></p>
   </div>
-
   <div class="results-body">
     <div class="result-block">
       <h3>Who you are</h3>
@@ -513,36 +505,46 @@
       <h3>What it actually translates to</h3>
       <p id="r-flip"></p>
     </div>
-
     <div class="next-move">
       <h3>Your next move</h3>
       <p id="r-next"></p>
-      <!-- UPDATE WITH YOUR PRODUCT LINKS -->
+      <!-- UPDATE THESE WITH YOUR GUMROAD LINKS BEFORE LAUNCH -->
       <a href="https://gumroad.com/YOUR_RESUME_KIT_LINK" class="btn-kit" id="r-cta">Get the Resume Kit →</a>
     </div>
   </div>
 
+  <!-- ── EMAIL: RESULTS + BONUS PROMPTS ── -->
   <div class="email-section">
-    <h3>Continue the conversation</h3>
-    <p>Practical guidance for women navigating the return — delivered weekly, tailored to where you actually are.</p>
-    <!-- REPLACE WITH YOUR BEEHIIV EMBED CODE -->
+    <h3>Get your results in your inbox</h3>
+    <p>Enter your email and we'll send you your personalized results plus three bonus resume prompts written specifically for your archetype — so you have something concrete to work with right away.</p>
+    <ul class="email-bonus-list">
+      <li>Your full quiz results, saved and delivered</li>
+      <li>Three archetype-specific bonus resume prompts</li>
+      <li>Guidance on your next most useful step</li>
+    </ul>
+    <!-- REPLACE WITH YOUR BEEHIIV / CONVERTKIT EMBED — tag: quiz_results_email -->
     <form class="email-form" id="email-form" onsubmit="handleEmail(event)">
       <input type="email" placeholder="Your email address" required autocomplete="email" />
-      <button type="submit">Send it to me</button>
+      <button type="submit">Email Me My Results</button>
     </form>
     <p class="privacy">No spam. Unsubscribe at any time. Your information stays private.</p>
   </div>
 
   <footer class="site-footer">
-    <p>© 2026 Katharine Blythe &nbsp;·&nbsp; <a href="/">Home</a> &nbsp;·&nbsp; <a href="/about">About</a> &nbsp;·&nbsp; Katharine Blythe is a pen name. The method is real.</p>
+    <p>© 2026 Katharine Blythe &nbsp;·&nbsp;
+      <a href="/">Home</a> &nbsp;·&nbsp;
+      <a href="/resume-kit">Resume Kit</a> &nbsp;·&nbsp;
+      <a href="/bridge-path">Bridge Path</a> &nbsp;·&nbsp;
+      <a href="/about">About</a> &nbsp;·&nbsp;
+      Katharine Blythe is a pen name. The method is real.
+    </p>
   </footer>
 </section>
 
-
-<!-- ── JAVASCRIPT ───────────────────────────────────────── -->
+<!-- ── JAVASCRIPT ── -->
 <script>
 
-// ── QUESTIONS ────────────────────────────────────────────
+// ── QUESTIONS ──────────────────────────────────────────────
 const QUESTIONS = [
   {
     id: 1,
@@ -568,7 +570,8 @@ const QUESTIONS = [
       { text: "I showed up every week without being asked, set up the chairs, stayed late to clean up, and never dropped the ball.", arc: "implementer" },
       { text: "Newer members or younger people came to me when they needed help understanding something or figuring out what to do.", arc: "mentor" },
       { text: "I knew how to push when the system was not cooperating — making the calls, writing the letters, and keeping going until it was resolved.", arc: "advocate" },
-      { text: "I designed the flyer, wrote the newsletter, photographed the event, or built the social media presence everyone else relied on.", arc: "maker" }
+      { text: "I designed the flyer, wrote the newsletter, photographed the event, or built the social media presence everyone else relied on.", arc: "maker" },
+      { text: "I wasn't really part of any groups or organizations during my time away. Most of what I did was private, at home, or just keeping things running for my family — and I don't have much external involvement to draw from.", arc: "lane_b" }
     ]
   },
   {
@@ -637,14 +640,14 @@ const QUESTIONS = [
   },
   {
     id: 8,
-    text: "When you think about sending your resume out, what are you most worried a hiring manager will assume?",
+    text: "Is there anything from your career break that a potential employer could verify — a reference who would take a call, a portfolio you could share, a certificate you have completed, or documented volunteer or community work?",
     shuffle: false,
     options: [
-      { text: "That the work I did will look too informal or unserious, even though it was real, demanding, and mattered.", arc: "worry_informal" },
-      { text: "That I do not have anything recent or credible enough to prove I am actually ready.", arc: "worry_recency" },
-      { text: "That I have real experience but my resume will not explain it in a way that gets me past the first screen.", arc: "worry_translation" },
-      { text: "That the gap itself will raise questions before anyone even looks at what I have to offer.", arc: "worry_gap" },
-      { text: "That I have been through something hard and I do not know how much of that story belongs on a resume.", arc: "worry_privacy" }
+      { text: "Yes — I have references, a portfolio, certificates, or documented work I could point to today.", arc: "verify_yes" },
+      { text: "Mostly — though I am not certain it looks polished or professional enough.", arc: "verify_mostly" },
+      { text: "Some things, but they are old, informal, or difficult to document in a way a hiring manager would take seriously.", arc: "verify_thin" },
+      { text: "Not really. Most of what I did was private, at home, or not the kind of thing that comes with documentation or references.", arc: "verify_no" },
+      { text: "I am genuinely not sure. I may have more than I think — I just do not know how to assess it yet.", arc: "verify_unsure" }
     ]
   },
   {
@@ -652,16 +655,15 @@ const QUESTIONS = [
     text: "How long have you been away from paid full-time work?",
     shuffle: false,
     options: [
-      { text: "2–5 years",            arc: "gap_2_5" },
-      { text: "5–10 years",           arc: "gap_5_10" },
-      { text: "10–20 years",          arc: "gap_10_20" },
-      { text: "More than 20 years",   arc: "gap_20_plus" }
+      { text: "2–5 years",          arc: "gap_2_5" },
+      { text: "5–10 years",         arc: "gap_5_10" },
+      { text: "10–20 years",        arc: "gap_10_20" },
+      { text: "More than 20 years", arc: "gap_20_plus" }
     ]
-  },
+  }
 ];
 
-
-// ── ARCHETYPES ────────────────────────────────────────────
+// ── ARCHETYPES ─────────────────────────────────────────────
 const ARCHETYPES = {
   builder: {
     color:    '#A85F4F',
@@ -672,81 +674,75 @@ const ARCHETYPES = {
     shadow:   'You have likely described what you did as volunteering, or helping out, or simply being involved. That framing may have felt safer — if you do not claim it as significant, no one can tell you it is not. But the work was significant. The fact that it was unpaid changes your financial history. It does not change what you built, or what building it required of you.',
     flip:     'In professional terms, what you did is called program development, organizational leadership, or entrepreneurship. The skills that make someone effective in a founding or growth role — identifying a gap, mobilizing resources, building something functional from nothing — are exactly the skills you have been practicing. A hiring manager looking for that profile will recognize it, once your resume is written to show it clearly.',
     next: {
-      translation: 'Your resume may be underselling the very experience that could get you to the interview. What you built deserves to be presented the way a hiring manager actually reads it — not minimized, not explained away. The Resume Kit gives you archetype-specific templates and bullet language to frame your initiative, leadership, and outcomes as credible, resume-ready experience.',
-      bridge:      'Your instincts are clearly Builder. What your resume needs now is one recent, external proof point that documents it — a formal board role, a new initiative with recorded outcomes, a project management or nonprofit certification, or a short contract. A professional certification in your target field can be exactly the right bridge. The Bridge Path Planner helps you identify the most efficient proof point for where you want to go.'
+      translation: 'Your resume may be underselling the very experience that could get you to the interview. What you built deserves to be presented the way a hiring manager actually reads it — not minimized, not explained away. The Resume Kit gives you archetype-specific bullet language to frame your initiative, leadership, and outcomes as credible, resume-ready experience.',
+      bridge:      'Your instincts are clearly Builder. What your resume needs now is one recent, external proof point that documents it — a formal board role, a new initiative with recorded outcomes, a project management or nonprofit certification, or a short contract. The Bridge Path Planner helps you identify the most efficient proof point for where you want to go.'
     }
   },
-
   operator: {
     color:    '#77616D',
     label:    'The Operator',
     title:    'The Operator',
     tagline:  'Things ran because you were there. That is not a small thing.',
-    identity: 'You stepped into organizations that already existed and made them function. Logistics, coordination, systems, follow-through — you were the person who ensured that what was supposed to happen, happened. Your contribution was often invisible in the way that all infrastructure is invisible: unnoticed until it fails. You kept it from failing. When you left, they noticed.',
+    identity: 'You stepped into organizations that already existed and made them function. Logistics, coordination, systems, follow-through — you were the person who ensured that what was supposed to happen, happened. Your contribution was often invisible in the way that all infrastructure is invisible: unnoticed until it fails. You kept it from failing.',
     shadow:   'The work you did rarely came with recognition. You were not the person at the front of the room — you were the person who made sure the room was ready, the materials were prepared, and everything held together. It is easy to look back at that kind of contribution and undervalue it, particularly when you are trying to explain your years away to a hiring manager who is looking for titles and metrics.',
-    flip:     'Operations, program management, and chief-of-staff-style roles exist precisely for people who can make complex things function reliably. These are not supporting roles — they are central ones. Organizations that run well do so because someone understands how to hold the moving pieces together. You have been doing exactly that work. The Resume Kit helps you frame it in language that hiring managers are trained to recognize.',
+    flip:     'Operations, program management, and chief-of-staff-style roles exist precisely for people who can make complex things function reliably. These are not supporting roles — they are central ones. Organizations that run well do so because someone understands how to hold the moving pieces together. You have been doing exactly that work. The Resume Kit helps you frame it in language that hiring managers recognize.',
     next: {
       translation: 'The work you did — coordination, systems, logistics, follow-through — maps directly to program management, operations, and administrative leadership roles. Your resume just needs to name it that way. The Resume Kit gives you the language and templates to make that translation.',
       bridge:      'You have the instincts of someone who makes organizations run. To strengthen your case, you may benefit from one recent, external engagement where those instincts are on record — a committee coordination role, a volunteer operations position, a project management certification, or a short contract assignment. The Bridge Path Planner helps you identify what makes the most sense for the roles you want.'
     }
   },
-
   implementer: {
     color:    '#8A6A5A',
     label:    'The Implementer',
     title:    'The Implementer',
     tagline:  'You did not just help. You made things happen.',
-    identity: 'During your years away, you showed up. Reliably. Consistently. Hands-on. You may not have been the one with the idea or the one building the system — but you were the one who made both of those things real on the ground. You staffed the events, sorted the donations, followed through on the tasks, supported the efforts, and never left something half done. Organizations run because people like you exist.',
+    identity: 'During your years away, you showed up. Reliably. Consistently. Hands-on. You may not have been the one with the idea or the one building the system — but you were the one who made both of those things real on the ground. You staffed the events, sorted the donations, followed through on the tasks, supported the efforts, and never left something half done.',
     shadow:   'You have probably described your contribution as "just helping." You were not in a leadership role, you did not have the title or the strategy, so it has not felt like something a hiring manager would take seriously. That framing is underselling something that is genuinely in demand. Reliable, consistent, accountable execution is harder to find than most organizations want to admit.',
-    flip:     'Operations support, program support, service delivery, event coordination, customer success, administrative roles — these positions exist precisely because reliable execution is not as common as it should be. You have a demonstrated track record of showing up and doing the work. That is evidence worth naming. The Resume Kit helps you frame it as one, in language that hiring managers recognize.',
+    flip:     'Operations support, program support, service delivery, event coordination, customer success, administrative roles — these positions exist precisely because reliable execution is not as common as it should be. You have a demonstrated track record of showing up and doing the work. That is evidence worth naming.',
     next: {
       translation: 'Your resume needs to communicate reliability and follow-through as professional strengths — not as supporting details. The Resume Kit gives you the language to translate your hands-on contributions into resume copy that gets you past the first screen.',
       bridge:      'Your instincts are clear — you execute, you show up, you follow through. To put that on record in a verifiable way, you may benefit from one recent external engagement: a part-time position, a volunteer role with clear scope, an internship, a returnship, or a relevant professional certification. The Bridge Path Planner helps you identify the right proof point and build it efficiently.'
     }
   },
-
   mentor: {
     color:    '#C28A6A',
     label:    'The Mentor',
     title:    'The Mentor',
     tagline:  'You have spent years developing people. That is a professional skill.',
-    identity: 'During your time away, you were the person others came to. Whether in a formal teaching role, a coaching capacity, a youth program, or simply as the person in your community whom people trusted to help them think through difficult things — you were developing people. You understood how to meet someone where they were, identify what they needed, and help them move forward. You have been doing this consistently for years.',
+    identity: 'During your time away, you were the person others came to. Whether in a formal teaching role, a coaching capacity, a youth program, or simply as the person in your community whom people trusted to help them think through difficult things — you were developing people. You understood how to meet someone where they were, identify what they needed, and help them move forward.',
     shadow:   'If someone asked whether your time away was professionally meaningful, you might hesitate. Teaching and coaching can feel soft by comparison to what you imagine hiring managers are looking for. That hesitation is understandable. It is also, to be direct about it, based on a misunderstanding of what organizations are actually trying to find.',
-    flip:     'Learning and development, people management, coaching, training design, and facilitation are not peripheral functions. They are roles organizations care deeply about and often struggle to fill well, precisely because the people who are genuinely good at developing others tend to have arrived there through experience, not just credentials. You have the experience. The Resume Kit helps you translate it into terms a hiring manager can act on.',
+    flip:     'Learning and development, people management, coaching, training design, and facilitation are not peripheral functions. They are roles organizations care deeply about and often struggle to fill well, precisely because the people who are genuinely good at developing others tend to have arrived there through experience, not just credentials.',
     next: {
       translation: 'The translation work is specific: not "I helped people" but "I designed and delivered a program that produced this result for these people over this period of time." The Resume Kit walks you through exactly how to write that sentence for your own experience.',
-      bridge:      'Your instincts are clearly Mentor. To make those instincts resume-ready, you may benefit from one recent, credible engagement — a formal training role, a structured coaching program, a recognized teaching or facilitation certificate, or a documented youth program position. A professional certification in your target field can be a strong bridge step here. The Bridge Path Planner helps you identify what will carry the most weight.'
+      bridge:      'Your instincts are clearly Mentor. To make those instincts resume-ready, you may benefit from one recent, credible engagement — a formal training role, a structured coaching program, a recognized teaching or facilitation certificate, or a documented youth program position. The Bridge Path Planner helps you identify what will carry the most weight.'
     }
   },
-
   advocate: {
     color:    '#7A3D56',
     label:    'The Advocate',
     title:    'The Advocate',
     tagline:  'You learned how institutions work — by making them move.',
     identity: 'You spent years navigating systems on behalf of someone who needed you in their corner. Schools, hospitals, insurance companies, legal processes, social services — you became fluent in structures you never expected to encounter, because someone you cared about required it of you. You learned who to call, how to escalate, what language to use, how to document everything, and how to stay in it until something changed.',
-    shadow:   'What you went through felt entirely personal. You were not building a professional portfolio — you were showing up for someone who needed you. The idea that this experience carries professional relevance may not have occurred to you. I want to be direct: the skills you used were professional skills. Research, institutional navigation, stakeholder coordination, case documentation, outcome tracking. The difference between doing that work for your family and doing it professionally is a job description.',
-    flip:     'Client services, case coordination, patient advocacy, healthcare navigation, compliance, stakeholder management — these fields are built around people who understand how to move through complex systems on behalf of others. You have done exactly that, often at a level of intensity that formal job descriptions do not fully capture. The Resume Kit helps you make that argument clearly and credibly, without requiring you to share more of the personal story than you choose to.',
+    shadow:   'What you went through felt entirely personal. You were not building a professional portfolio — you were showing up for someone who needed you. The idea that this experience carries professional relevance may not have occurred to you. I want to be direct: the skills you used were professional skills. Research, institutional navigation, stakeholder coordination, case documentation, outcome tracking.',
+    flip:     'Client services, case coordination, patient advocacy, healthcare navigation, compliance, stakeholder management — these fields are built around people who understand how to move through complex systems on behalf of others. You have done exactly that, often at a level of intensity that formal job descriptions do not fully capture.',
     next: {
       translation: 'The language matters. Not "I helped my family through a difficult period" — but "I managed a multi-institutional process involving healthcare, legal, and educational systems, coordinating across multiple stakeholders to document issues, escalate appropriately, and achieve specific outcomes." That sentence is in your experience. The Resume Kit helps you find it.',
       bridge:      'Your experience navigating systems on behalf of others is real and substantial. To make it most legible on a resume, you may benefit from one recent, external engagement in a professional frame — a formal advocacy role, a nonprofit coordination position, a case management volunteer role, or a certification in healthcare navigation, social services, or legal support. The Bridge Path Planner helps you identify the right bridge for your target field.'
     }
   },
-
   maker: {
     color:    '#B98286',
     label:    'The Maker',
     title:    'The Maker',
     tagline:  'You created a body of work. It is time to call it that.',
-    identity: 'During the years you were away from paid employment, you were making things. Writing, design, photography, craft, a small business, a newsletter, a social media presence — whatever form it took, you were producing work. Something exists because you made it. A body of work accumulated across years, while you may have told yourself it was a hobby, or a side project, or simply something you did. You may not think of yourself as creative, but you were often the person making the message clearer, more visible, and more useful than it would have been without you.',
-    shadow:   'There is likely a voice that has told you this work does not qualify. That it was not serious enough, not corporate enough, not the right kind of output to present in a professional context. A large social media following is not a credential on its own — but the work that produced it is. What a creative director, a content lead, or a communications manager sees when they look at a portfolio of real, consistent work is not where it was produced or whether it was paid. They see what was made, and whether the person can do it again.',
+    identity: 'During the years you were away from paid employment, you were making things. Writing, design, photography, craft, a small business, a newsletter, a social media presence — whatever form it took, you were producing work. Something exists because you made it. A body of work accumulated across years, while you may have told yourself it was a hobby, or a side project, or simply something you did.',
+    shadow:   'There is likely a voice that has told you this work does not qualify. That it was not serious enough, not corporate enough, not the right kind of output to present in a professional context. What a creative director, a content lead, or a communications manager sees when they look at a portfolio of real, consistent work is not where it was produced or whether it was paid. They see what was made, and whether the person can do it again.',
     flip:     'Content strategy, brand communications, creative direction, marketing, design — these roles are filled by people who built their capabilities the way you built yours: over time, by making things and getting better at making things. The difference between their trajectory and yours is that they named it a career earlier. The Resume Kit shows you how to make that shift now.',
     next: {
       translation: 'You have a portfolio. You simply have not organized or framed it as one. The Resume Kit walks you through how to present your body of work as professional experience — including how to address the formal employment question without letting it overshadow what you actually produced.',
       bridge:      'You have creative instincts and output that exists and can be shown. To strengthen your case for paid creative roles, you may benefit from one recent, professional-context project — a commissioned piece, a nonprofit communications role, a freelance assignment, a design or writing certificate, or a content portfolio built around a clear niche. The Bridge Path Planner helps you identify what will move the needle most for the roles you want.'
     }
   },
-
   start: {
     color:    '#9A7C86',
     label:    'The Starting Line',
@@ -761,14 +757,12 @@ const ARCHETYPES = {
   }
 };
 
-
-// ── STATE ────────────────────────────────────────────────
+// ── STATE ──────────────────────────────────────────────────
 let current   = 0;
 const answers  = new Array(QUESTIONS.length).fill(null);
 const shuffled = [];
 
-
-// ── UTILITIES ────────────────────────────────────────────
+// ── UTILITIES ──────────────────────────────────────────────
 function shuffle(arr) {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
@@ -777,11 +771,9 @@ function shuffle(arr) {
   }
   return a;
 }
-
 function scrollTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
 
-
-// ── START ────────────────────────────────────────────────
+// ── START ──────────────────────────────────────────────────
 function startQuiz() {
   QUESTIONS.forEach(q => shuffled.push(q.shuffle ? shuffle(q.options) : q.options));
   document.getElementById('landing').style.display = 'none';
@@ -790,8 +782,7 @@ function startQuiz() {
   scrollTop();
 }
 
-
-// ── RENDER QUESTION ──────────────────────────────────────
+// ── RENDER QUESTION ────────────────────────────────────────
 function renderQ(idx) {
   const q    = QUESTIONS[idx];
   const opts = shuffled[idx];
@@ -804,15 +795,14 @@ function renderQ(idx) {
 
   const trans = document.getElementById('q-transition');
   if (q.transition) {
-    trans.textContent    = q.transition;
-    trans.style.display  = 'block';
+    trans.textContent  = q.transition;
+    trans.style.display = 'block';
   } else {
-    trans.style.display  = 'none';
+    trans.style.display = 'none';
   }
 
   const list = document.getElementById('options');
   list.innerHTML = '';
-
   opts.forEach(function(opt, i) {
     const li = document.createElement('li');
     li.className   = 'opt';
@@ -823,14 +813,12 @@ function renderQ(idx) {
   });
 
   document.getElementById('btn-back').style.visibility = idx === 0 ? 'hidden' : 'visible';
-
   const nb = document.getElementById('btn-next');
   nb.disabled    = answers[idx] === null;
   nb.textContent = idx === tot - 1 ? 'See My Results →' : 'Continue →';
 }
 
-
-// ── SELECT OPTION ────────────────────────────────────────
+// ── SELECT OPTION ──────────────────────────────────────────
 function pick(qIdx, optIdx, opt) {
   answers[qIdx] = { i: optIdx, arc: opt.arc };
   document.querySelectorAll('.opt').forEach(function(el, i) {
@@ -839,43 +827,62 @@ function pick(qIdx, optIdx, opt) {
   document.getElementById('btn-next').disabled = false;
 }
 
-
-// ── NAVIGATION ───────────────────────────────────────────
+// ── NAVIGATION ─────────────────────────────────────────────
 function nextQ() {
   if (answers[current] === null) return;
   if (current < QUESTIONS.length - 1) { current++; renderQ(current); scrollTop(); }
   else showResults();
 }
-
 function prevQ() {
   if (current > 0) { current--; renderQ(current); scrollTop(); }
 }
 
-
-// ── SCORING ──────────────────────────────────────────────
+// ── SCORING ────────────────────────────────────────────────
 function calcResult() {
-  const archetypes  = ['builder','operator','implementer','mentor','advocate','maker'];
-  const score       = { builder:0, operator:0, implementer:0, mentor:0, advocate:0, maker:0 };
-  let   startFlag   = false;
-  let   lane        = 'translation';
+  const archetypes = ['builder','operator','implementer','mentor','advocate','maker'];
+  const score      = { builder:0, operator:0, implementer:0, mentor:0, advocate:0, maker:0 };
+  let   startFlag  = false;
+  let   lane       = 'translation';
 
   answers.forEach(function(ans, idx) {
     if (!ans) return;
     const arc = ans.arc;
 
+    // Q6 (idx=5): primary lane determination
     if (idx === 5) {
       if (arc === 'lane_b') lane = 'bridge';
       return;
     }
 
-    if (idx >= 6) return;
+    // Q7 (idx=6): status — informational only
+    if (idx === 6) return;
 
+    // Q8 (idx=7): verification — also sets lane if thin/no/unsure
+    if (idx === 7) {
+      if (arc === 'verify_thin' || arc === 'verify_no' || arc === 'verify_unsure') {
+        lane = 'bridge';
+      }
+      return;
+    }
+
+    // Q9 (idx=8): gap length — informational only
+    if (idx === 8) return;
+
+    // Q1 (idx=0): primary archetype scoring (2 pts) or start flag
     if (idx === 0) {
       if (arc === 'start') { startFlag = true; return; }
       if (score.hasOwnProperty(arc)) score[arc] += 2;
       return;
     }
 
+    // Q2 (idx=1): check for bridge option (7th answer) or regular archetype
+    if (idx === 1) {
+      if (arc === 'lane_b') { lane = 'bridge'; return; }
+      if (score.hasOwnProperty(arc)) score[arc] += 1;
+      return;
+    }
+
+    // Q3–Q5 (idx=2–4): archetype scoring (1 pt each)
     if (score.hasOwnProperty(arc)) score[arc] += 1;
   });
 
@@ -883,57 +890,53 @@ function calcResult() {
   const maxScore = Math.max(...vals);
   const total    = vals.reduce(function(a, b) { return a + b; }, 0);
 
+  // Pure start: Q1 "start" answer, no other archetype signals, bridge lane
   if (startFlag && lane === 'bridge' && maxScore <= 2) {
     return { archetype: 'start', lane: 'bridge' };
   }
-
+  // Start flag but archetype emerged from Q3–Q5 — show archetype + bridge
   if (startFlag && maxScore >= 3) {
     return { archetype: pickWinner(score, archetypes), lane: 'bridge' };
   }
-
+  // No scoring at all
   if (total === 0) return { archetype: 'start', lane: 'bridge' };
 
   return { archetype: pickWinner(score, archetypes), lane: lane };
 }
 
-
 function pickWinner(score, archetypes) {
   const maxScore = Math.max(...Object.values(score));
   const tied     = archetypes.filter(function(k) { return score[k] === maxScore; });
-
   if (tied.length === 1) return tied[0];
-
   if (answers[4] && tied.includes(answers[4].arc)) return answers[4].arc;
   if (answers[0] && tied.includes(answers[0].arc)) return answers[0].arc;
-
   return tied[0];
 }
 
-
-// ── SHOW RESULTS ─────────────────────────────────────────
+// ── SHOW RESULTS ───────────────────────────────────────────
 function showResults() {
-  const result     = calcResult();
-  const archetype  = result.archetype;
-  const lane       = result.lane;
-  const data       = ARCHETYPES[archetype];
-  const nextCopy   = data.next[lane] || data.next.bridge;
+  const result    = calcResult();
+  const archetype = result.archetype;
+  const lane      = result.lane;
+  const data      = ARCHETYPES[archetype];
+  const nextCopy  = data.next[lane] || data.next.bridge;
 
   document.getElementById('results').style.setProperty('--archetype-color', data.color);
 
-  const arcBadge  = document.getElementById('r-archetype-badge');
-  arcBadge.textContent          = data.label;
+  const arcBadge = document.getElementById('r-archetype-badge');
+  arcBadge.textContent         = data.label;
   arcBadge.style.backgroundColor = data.color;
 
   const laneBadge = document.getElementById('r-lane-badge');
   if (archetype === 'start') {
-    laneBadge.textContent  = 'Bridge Path';
-    laneBadge.className    = 'lane-badge lane-badge-b';
+    laneBadge.textContent = 'Bridge Path';
+    laneBadge.className   = 'lane-badge lane-badge-b';
   } else if (lane === 'translation') {
-    laneBadge.textContent  = 'Translation Lane';
-    laneBadge.className    = 'lane-badge lane-badge-t';
+    laneBadge.textContent = 'Translation Lane';
+    laneBadge.className   = 'lane-badge lane-badge-t';
   } else {
-    laneBadge.textContent  = 'Bridge Lane';
-    laneBadge.className    = 'lane-badge lane-badge-b';
+    laneBadge.textContent = 'Bridge Lane';
+    laneBadge.className   = 'lane-badge lane-badge-b';
   }
 
   document.getElementById('r-title').textContent    = data.title;
@@ -943,10 +946,11 @@ function showResults() {
   document.getElementById('r-flip').textContent     = data.flip;
   document.getElementById('r-next').textContent     = nextCopy;
 
+  // Lane-based product CTA
   const cta = document.getElementById('r-cta');
   if (lane === 'bridge' || archetype === 'start') {
-    cta.textContent = 'Start with the Bridge Path Planner →';
-    cta.href        = 'https://gumroad.com/YOUR_BRIDGE_PLANNER_LINK';
+    cta.textContent = 'Get the Bridge Path Planner →';
+    cta.href        = 'https://gumroad.com/YOUR_BRIDGE_PATH_LINK';
   } else {
     cta.textContent = 'Get the Resume Kit →';
     cta.href        = 'https://gumroad.com/YOUR_RESUME_KIT_LINK';
@@ -957,12 +961,11 @@ function showResults() {
   scrollTop();
 }
 
-
-// ── EMAIL PLACEHOLDER ────────────────────────────────────
+// ── EMAIL ──────────────────────────────────────────────────
 function handleEmail(e) {
   e.preventDefault();
   document.getElementById('email-form').innerHTML =
-    '<p style="color:rgba(255,255,255,0.85);font-size:1rem;font-weight:500;">You\'re in. Your first letter is on its way.</p>';
+    '<p style="color:rgba(255,255,255,0.85);font-size:1rem;font-weight:500;text-align:center;">You\'re in. Your results and bonus prompts are on their way.</p>';
 }
 
 </script>
