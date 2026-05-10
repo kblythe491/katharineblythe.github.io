@@ -13,7 +13,7 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="About Katharine Blythe | The Invisible Work Method">
   <meta name="twitter:description" content="About Katharine Blythe and The Invisible Work Method — a practical framework for women returning to paid work after a significant career break.">
-  <!-- Google Analytics — replace G-DRH7QNRRG6 with your Measurement ID -->
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DRH7QNRRG6"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -21,11 +21,12 @@
     gtag('js', new Date());
     gtag('config', 'G-DRH7QNRRG6');
   </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
       --primary: #3D2636;
       --bg:      #F7EFE6;
@@ -37,11 +38,10 @@
       --border:  #D4C0BA;
       --soft:    #C4AFAA;
     }
-
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); }
 
-    /* ── NAV ───────────────────────────────────────────── */
+    /* ── NAV ── */
     .site-nav {
       background: var(--primary);
       padding: 1.1rem 2rem;
@@ -55,8 +55,9 @@
       text-decoration: none;
       font-size: 1rem;
       font-weight: 400;
+      flex-shrink: 0;
     }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; align-items: center; flex-wrap: wrap; }
     .nav-links a {
       color: rgba(255,255,255,0.62);
       text-decoration: none;
@@ -72,86 +73,71 @@
       font-size: 0.8rem;
       transition: background 0.2s;
     }
-    .nav-links .nav-cta:hover { background: var(--hover); color: var(--white); }
+    .nav-links .nav-cta:hover { background: var(--hover); }
 
-    /* ── PAGE HEADER ───────────────────────────────────── */
-    .page-header {
+    /* ── PAGE HERO ── */
+    .page-hero {
       background: var(--primary);
       color: var(--white);
+      padding: 5rem 1.5rem 4rem;
       text-align: center;
-      padding: 4.5rem 1.5rem 3.5rem;
     }
     .eyebrow {
       font-size: 0.68rem;
       letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--accent);
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
     }
-    .page-header h1 {
+    .page-hero h1 {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(1.8rem, 4.5vw, 3rem);
+      font-size: clamp(2rem, 5vw, 3rem);
       font-weight: 400;
-      line-height: 1.18;
-      max-width: 580px;
+      line-height: 1.15;
+      max-width: 600px;
       margin: 0 auto;
     }
 
-    /* ── BODY ──────────────────────────────────────────── */
+    /* ── BODY ── */
     .about-body {
       max-width: 640px;
       margin: 0 auto;
-      padding: 4rem 1.5rem 5rem;
+      padding: 4.5rem 1.5rem;
     }
-
-    .disclosure {
-      margin-top: 3rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
-      font-size: 0.85rem;
-      line-height: 1.85;
-      color: var(--soft);
-      font-style: italic;
-    }
-
     .about-body p {
       font-size: 0.97rem;
       line-height: 1.95;
       color: var(--text);
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.4rem;
     }
-    .about-body p:last-of-type { margin-bottom: 2.5rem; }
+    .about-body p:last-of-type { margin-bottom: 0; }
 
-    .about-lone {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
-      font-style: italic;
-      color: var(--accent);
-      margin-bottom: 1.5rem;
-    }
-
-    .about-brand-line {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
-      color: var(--primary);
-      font-weight: 400;
-      margin-bottom: 2rem;
-      line-height: 1.5;
+    /* ── DIVIDER ── */
+    .section-divider {
+      height: 1px;
+      background: var(--border);
+      max-width: 640px;
+      margin: 0 auto;
     }
 
-    .about-h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem;
-      color: var(--primary);
-      font-weight: 700;
-      margin-bottom: 0.75rem;
+    /* ── CTA BLOCK ── */
+    .about-cta {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      text-align: center;
     }
-
+    .about-cta p {
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.85;
+      margin-bottom: 1.75rem;
+    }
     .btn-primary {
       background: var(--accent);
       color: var(--white);
       border: none;
-      padding: 1rem 2.5rem;
+      padding: 1.05rem 2.5rem;
       font-size: 0.91rem;
       font-family: 'Inter', sans-serif;
       font-weight: 500;
@@ -163,97 +149,155 @@
     }
     .btn-primary:hover { background: var(--hover); }
 
-    /* ── FOOTER ────────────────────────────────────────── */
+    /* ── PEN NAME NOTE ── */
+    .pen-name-note {
+      background: var(--card);
+      padding: 4rem 1.5rem;
+    }
+    .pen-name-inner {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .pen-name-inner h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: rgba(61, 38, 54, 0.6);
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+    .pen-name-inner p {
+      font-size: 0.93rem;
+      line-height: 1.85;
+      color: rgba(43, 34, 40, 0.58);
+      font-weight: 300;
+    }
+
+    /* ── FOOTER ── */
     .site-footer {
       background: var(--text);
       color: rgba(255,255,255,0.32);
-      text-align: center;
-      padding: 1.75rem 1.5rem;
-      font-size: 0.74rem;
-      letter-spacing: 0.04em;
-      line-height: 1.9;
+      padding: 2.5rem 2rem 2rem;
+      font-size: 0.78rem;
     }
-    .site-footer a { color: rgba(255,255,255,0.42); text-decoration: none; }
-    .site-footer a:hover { color: rgba(255,255,255,0.72); }
+    .footer-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-bottom: 1.75rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      margin-bottom: 1.25rem;
+    }
+    .footer-brand {
+      font-family: 'Playfair Display', serif;
+      color: rgba(255,255,255,0.55);
+      font-size: 1rem;
+      font-weight: 400;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.5rem;
+      list-style: none;
+    }
+    .footer-links a {
+      color: rgba(255,255,255,0.38);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: rgba(255,255,255,0.7); }
+    .footer-copy {
+      text-align: center;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.25);
+      line-height: 1.8;
+    }
 
-    @media (max-width: 480px) {
+    @media (max-width: 600px) {
       .site-nav { padding: 1rem 1.25rem; }
-      .nav-links { gap: 1.25rem; }
+      .nav-links { gap: 1rem; }
+      .page-hero { padding: 3.5rem 1.25rem 3rem; }
     }
   </style>
 </head>
 <body>
 
+<!-- ── NAV ── -->
 <nav class="site-nav">
   <a href="/" class="nav-brand">Katharine Blythe</a>
   <ul class="nav-links">
     <li><a href="/about">About</a></li>
+    <li><a href="/resume-kit">Resume Kit</a></li>
+    <li><a href="/bridge-path">Bridge Path</a></li>
     <li><a href="/invisible-work" class="nav-cta">Take the Quiz</a></li>
   </ul>
 </nav>
 
-<div class="page-header">
+<!-- ── PAGE HERO ── -->
+<div class="page-hero">
   <p class="eyebrow">The Invisible Work Method</p>
   <h1>About Katharine Blythe</h1>
 </div>
 
+<!-- ── BODY ── -->
 <div class="about-body">
-
   <p>The Invisible Work Method began with a career gap.</p>
-
-  <p class="about-lone">Mine.</p>
-
+  <p><em>Mine.</em></p>
   <p>I stayed home after the birth of my first child, and I did not return to paid work for a long time.</p>
-
   <p>During those years, I was busy. I love learning, and I like to stay active, so I kept finding ways to use my mind and my energy. I taught in community settings, organized local initiatives, supported people, upgraded my own skills, and helped make things happen.</p>
-
   <p>At the time, I considered much of it useful, meaningful, and fun. I did not think of it as work.</p>
-
   <p>Then I suddenly found myself needing to return to the workforce quickly, and I realized I had been carrying responsibility, managing complexity, supporting people, solving problems, and organizing moving pieces for years. None of it came with a job description, formal metrics, or a paycheck, but I assumed — naively — that it could be easily explained.</p>
-
   <p>I carried a lot of confidence into that early job search.</p>
-
   <p>I learned quickly that a career gap is not solved by confidence alone.</p>
-
   <p>You cannot pretend the gap does not matter. It does. And it is not always solved by listing volunteer work on a resume and hoping someone understands what it means.</p>
-
   <p>Now that I sit in the hiring chair, I understand why.</p>
-
   <p>When I see an applicant with a significant gap, I slow down. I look for the thread. I look for the reason to invite that person into a conversation.</p>
-
   <p>But too often, the resume does not give me enough to work with.</p>
-
   <p>Not because the work was not real. Not because the skills are not there. But because the experience has not been translated into language that makes the person's readiness clear.</p>
-
   <p>And even when I can find a reason to bring the person in for an interview, the same problem can continue. The experience is there, but the person does not yet have the words to speak about it clearly, confidently, and in a way that connects to the role in front of them.</p>
-
   <p>That is why The Invisible Work Method exists.</p>
-
   <p>It is not about pretending a career gap does not matter. It can raise fair questions about recency, readiness, direction, and proof.</p>
-
   <p>But a gap should not be the only thing a resume says about you.</p>
-
   <p>Some experience is ready to translate. Some experience needs stronger language. And sometimes the most strategic next step is one recent, external proof point — a volunteer project with clear scope, a certification, an internship, a returnship, a short contract, or a portfolio piece.</p>
-
   <p>The point is not to inflate what you did. The point is to understand what your experience can already prove, what it still needs, and how to make the strongest possible case for your return.</p>
-
   <p>Just because life had other plans for you — or because you made a choice that made sense at the time — does not mean you should spend the rest of your life paying for that decision.</p>
-
-  <p class="about-brand-line">You are not behind. But we do need to be strategic.</p>
-
-  <a href="/invisible-work" class="btn-primary">Take the Invisible Work Quiz →</a>
-
-  <div class="disclosure">
-    <p class="about-h2">A note on the name</p>
-    Katharine Blythe is a pen name. I use it to keep this work separate from the rest of my professional life, so this project does not include a traditional professional bio or public résumé.
-    <br><br>
-    The story is real. The method is real. The boundary is intentional.
-  </div>
-
+  <p>You are not behind. But we do need to be strategic.</p>
 </div>
 
+<div class="section-divider"></div>
+
+<!-- ── CTA ── -->
+<div class="about-cta">
+  <p>The quiz is where most people start. Nine questions, two minutes, and a clear picture of where your experience stands and what your resume needs to do next.</p>
+  <a href="/invisible-work" class="btn-primary">Take the Invisible Work Quiz — Free</a>
+</div>
+
+<!-- ── PEN NAME NOTE ── -->
+<div class="pen-name-note">
+  <div class="pen-name-inner">
+    <h3>A note on the name</h3>
+    <p>Katharine Blythe is a pen name. I use it to keep this work separate from the rest of my professional life, so this project does not include a traditional professional bio or public résumé. The story is real. The method is real. The boundary is intentional.</p>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
 <footer class="site-footer">
-  <p>© 2026 Katharine Blythe &nbsp;·&nbsp; <a href="/">Home</a> &nbsp;·&nbsp; <a href="/invisible-work">Take the Quiz</a> &nbsp;·&nbsp; <a href="/about">About</a></p>
+  <div class="footer-inner">
+    <span class="footer-brand">Katharine Blythe</span>
+    <ul class="footer-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/invisible-work">Take the Quiz</a></li>
+      <li><a href="/resume-kit">Resume Kit</a></li>
+      <li><a href="/bridge-path">Bridge Path</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+  </div>
+  <div class="footer-copy">
+    <p>© 2026 Katharine Blythe. All rights reserved. · Katharine Blythe is a pen name. The method is real.</p>
+  </div>
 </footer>
 
 </body>
