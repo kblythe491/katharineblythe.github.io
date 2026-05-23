@@ -1,679 +1,480 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Invisible Work Method | Katharine Blythe</title>
-<meta name="description" content="The Invisible Work Method helps women with significant career gaps understand what their years away actually built — and how to translate it into resume language that works.">
-<link rel="canonical" href="https://katharineblythe.com/">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://katharineblythe.com/">
-<meta property="og:title" content="The Invisible Work Method | Katharine Blythe">
-<meta property="og:description" content="The Invisible Work Method helps women with significant career gaps understand what their years away actually built — and how to translate it into resume language that works.">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="The Invisible Work Method | Katharine Blythe">
-<meta name="twitter:description" content="The Invisible Work Method helps women with significant career gaps understand what their years away actually built — and how to translate it into resume language that works.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Invisible Work Quiz | Katharine Blythe</title>
+  <meta name="description" content="Take the free Invisible Work Quiz — find your archetype, your resume path, and your clearest next step back to paid work after a career gap.">
+  <link rel="canonical" href="https://katharineblythe.com/invisible-work">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://katharineblythe.com/invisible-work">
+  <meta property="og:title" content="The Invisible Work Quiz | Katharine Blythe">
+  <meta property="og:description" content="Take the free Invisible Work Quiz — find your archetype, your resume path, and your clearest next step back to paid work after a career gap.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The Invisible Work Quiz | Katharine Blythe">
+  <meta name="twitter:description" content="Take the free Invisible Work Quiz — find your archetype, your resume path, and your clearest next step back to paid work after a career gap.">
 
-<!-- Google Analytics — replace G-DRH7QNRRG6 with your Measurement ID -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DRH7QNRRG6"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-DRH7QNRRG6');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DRH7QNRRG6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DRH7QNRRG6');
+  </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1778769");</style>
 
-<style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary:   #3D2636;
+      --bg:        #F7EFE6;
+      --text:      #2B2228;
+      --card:      #EAD8D1;
+      --accent:    #B98286;
+      --hover:     #8E4F63;
+      --white:     #FFFFFF;
+      --border:    #D4C0BA;
+      --soft:      #C4AFAA;
+      --lane-t:    #4A2F42;
+      --lane-b:    #A98A83;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
 
-:root {
-  --primary: #3D2636;
-  --bg: #F7EFE6;
-  --text: #2B2228;
-  --card: #EAD8D1;
-  --accent: #B98286;
-  --hover: #8E4F63;
-  --white: #FFFFFF;
-  --border: #D4C0BA;
-  --soft: #C4AFAA;
-}
+    /* ── NAV ── */
+    .site-nav {
+      background: var(--primary);
+      padding: 1.1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-brand {
+      font-family: 'Playfair Display', serif;
+      color: var(--white);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 400;
+      flex-shrink: 0;
+    }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; align-items: center; flex-wrap: wrap; }
+    .nav-links a {
+      color: rgba(255,255,255,0.62);
+      text-decoration: none;
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links .nav-cta {
+      color: var(--white);
+      background: var(--accent);
+      padding: 0.45rem 1rem;
+      font-size: 0.8rem;
+      transition: background 0.2s;
+    }
+    .nav-links .nav-cta:hover { background: var(--hover); color: var(--white); }
 
-html { scroll-behavior: smooth; }
-body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); }
+    /* ── LANDING ── */
+    #landing {
+      min-height: calc(100vh - 58px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 3rem 1.5rem;
+      background: var(--primary);
+      color: var(--white);
+    }
+    .eyebrow {
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.75rem;
+    }
+    #landing h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5.5vw, 3.6rem);
+      line-height: 1.14;
+      margin-bottom: 1.5rem;
+      max-width: 680px;
+      font-weight: 400;
+    }
+    #landing .lead {
+      font-size: clamp(0.95rem, 2vw, 1.08rem);
+      line-height: 1.85;
+      color: rgba(255,255,255,0.68);
+      max-width: 480px;
+      margin-bottom: 2.75rem;
+      font-weight: 300;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: var(--white);
+      border: none;
+      padding: 1.05rem 2.75rem;
+      font-size: 0.93rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover { background: var(--hover); }
+    .landing-meta {
+      margin-top: 1.25rem;
+      font-size: 0.73rem;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.08em;
+    }
 
-/* ── NAV ───────────────────────────────────────────── */
-.site-nav {
-  background: var(--primary);
-  padding: 1.1rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.nav-brand {
-  font-family: 'Playfair Display', serif;
-  color: var(--white);
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 400;
-  flex-shrink: 0;
-}
-.nav-links { display: flex; gap: 1.75rem; list-style: none; align-items: center; flex-wrap: wrap; }
-.nav-links a {
-  color: rgba(255,255,255,0.62);
-  text-decoration: none;
-  font-size: 0.82rem;
-  letter-spacing: 0.04em;
-  transition: color 0.2s;
-}
-.nav-links a:hover { color: var(--white); }
-.nav-links .nav-cta {
-  color: var(--white);
-  background: var(--accent);
-  padding: 0.45rem 1rem;
-  font-size: 0.8rem;
-  transition: background 0.2s;
-}
-.nav-links .nav-cta:hover { background: var(--hover); color: var(--white); }
+    /* ── QUIZ ── */
+    #quiz { display: none; background: var(--bg); min-height: 100vh; }
+    .quiz-header {
+      background: var(--primary);
+      padding: 1.1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .quiz-brand {
+      color: var(--white);
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+    .quiz-progress-label {
+      color: var(--soft);
+      font-size: 0.76rem;
+      letter-spacing: 0.05em;
+    }
+    .progress-track { height: 3px; background: var(--border); }
+    .progress-fill  { height: 100%; background: var(--accent); transition: width 0.35s ease; }
+    .question-wrapper {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 1.5rem;
+    }
+    .q-label {
+      font-size: 0.66rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--accent);
+      margin-bottom: 0.9rem;
+    }
+    .q-transition {
+      font-size: 0.82rem;
+      color: var(--soft);
+      font-style: italic;
+      margin-bottom: 1.25rem;
+      padding: 0.6rem 0.9rem;
+      border-left: 2px solid var(--accent);
+    }
+    .q-text {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.15rem, 2.8vw, 1.55rem);
+      line-height: 1.48;
+      color: var(--primary);
+      margin-bottom: 2rem;
+      font-weight: 400;
+    }
+    .options {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+    .opt {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      padding: 1rem 1.2rem;
+      cursor: pointer;
+      line-height: 1.65;
+      font-size: 0.91rem;
+      transition: border-color 0.15s, background 0.15s, color 0.15s;
+      text-align: left;
+      color: var(--text);
+    }
+    .opt:hover  { border-color: var(--accent); background: var(--card); }
+    .opt.chosen { border-color: var(--primary); background: var(--primary); color: var(--white); }
+    .quiz-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 640px;
+      margin: 2rem auto 0;
+      padding: 0 1.5rem 3.5rem;
+    }
+    .btn-back {
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 0.83rem;
+      cursor: pointer;
+      opacity: 0.38;
+      padding: 0.5rem 0;
+      transition: opacity 0.15s;
+      font-family: 'Inter', sans-serif;
+    }
+    .btn-back:hover { opacity: 0.8; }
+    .btn-next {
+      background: var(--primary);
+      color: var(--white);
+      border: none;
+      padding: 0.9rem 2rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 500;
+      cursor: pointer;
+      letter-spacing: 0.04em;
+      transition: background 0.2s;
+    }
+    .btn-next:hover:not(:disabled) { background: var(--hover); }
+    .btn-next:disabled { opacity: 0.28; cursor: not-allowed; }
 
-/* ── SHARED ────────────────────────────────────────── */
-.eyebrow {
-  font-size: 0.68rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 1.25rem;
-}
-.section-label {
-  font-size: 0.65rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: var(--accent);
-  margin-bottom: 1rem;
-}
-.btn-primary {
-  background: var(--accent);
-  color: var(--white);
-  border: none;
-  padding: 1.05rem 2.5rem;
-  font-size: 0.91rem;
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  cursor: pointer;
-  transition: background 0.2s;
-  text-decoration: none;
-  display: inline-block;
-}
-.btn-primary:hover { background: var(--hover); }
-.btn-secondary {
-  background: transparent;
-  color: var(--accent);
-  border: 1.5px solid var(--accent);
-  padding: 1rem 2.25rem;
-  font-size: 0.88rem;
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  cursor: pointer;
-  transition: all 0.2s;
-  text-decoration: none;
-  display: inline-block;
-}
-.btn-secondary:hover { background: var(--accent); color: var(--white); }
-.btn-secondary-white {
-  background: transparent;
-  color: rgba(255,255,255,0.75);
-  border: 1.5px solid rgba(255,255,255,0.35);
-  padding: 1rem 2.25rem;
-  font-size: 0.88rem;
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  cursor: pointer;
-  transition: all 0.2s;
-  text-decoration: none;
-  display: inline-block;
-}
-.btn-secondary-white:hover { border-color: var(--white); color: var(--white); }
-.btn-row {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-.divider { height: 1px; background: var(--border); max-width: 680px; margin: 0 auto; }
-.divider-full { height: 1px; background: var(--border); }
+    /* ── RESULTS ── */
+    #results { display: none; background: var(--bg); }
+    .results-hero {
+      background: var(--primary);
+      color: var(--white);
+      text-align: center;
+      padding: 4.5rem 1.5rem 3.5rem;
+    }
+    .badge-row {
+      display: flex;
+      justify-content: center;
+      gap: 0.6rem;
+      margin-bottom: 1.4rem;
+      flex-wrap: wrap;
+    }
+    .archetype-badge, .lane-badge {
+      display: inline-block;
+      padding: 0.28rem 0.85rem;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+    .archetype-badge { background: var(--archetype-color, var(--accent)); color: var(--white); }
+    .lane-badge-t { background: var(--lane-t); color: var(--white); }
+    .lane-badge-b { background: var(--lane-b); color: var(--white); }
+    .results-hero h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 0.9rem;
+      font-weight: 400;
+      line-height: 1.15;
+    }
+    .results-hero .tagline {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.62);
+      max-width: 440px;
+      margin: 0 auto;
+      line-height: 1.75;
+      font-style: italic;
+      font-family: 'Playfair Display', serif;
+    }
+    .results-body {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem;
+    }
+    .result-block {
+      margin-bottom: 2.75rem;
+      padding-left: 1.1rem;
+      border-left: 3px solid var(--archetype-color, var(--accent));
+    }
+    .result-block h3 {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--archetype-color, var(--accent));
+      margin-bottom: 0.85rem;
+    }
+    .result-block p {
+      font-size: 0.97rem;
+      line-height: 1.9;
+      color: var(--text);
+    }
+    .next-move {
+      background: var(--card);
+      padding: 2.5rem 2rem;
+      border-top: 3px solid var(--archetype-color, var(--accent));
+    }
+    .next-move h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-weight: 400;
+    }
+    .next-move p {
+      line-height: 1.85;
+      color: var(--text);
+      margin-bottom: 1.75rem;
+      font-size: 0.95rem;
+    }
+    .btn-kit {
+      display: inline-block;
+      background: var(--primary);
+      color: var(--white);
+      padding: 0.9rem 2rem;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.88rem;
+      letter-spacing: 0.05em;
+      transition: background 0.2s;
+      font-family: 'Inter', sans-serif;
+    }
+    .btn-kit:hover { background: var(--hover); }
 
-/* ── HERO ──────────────────────────────────────────── */
-.hero {
-  background: var(--primary);
-  color: var(--white);
-  text-align: center;
-  padding: 6rem 1.5rem 5.5rem;
-}
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.9rem, 5.5vw, 3.4rem);
-  line-height: 1.18;
-  font-weight: 400;
-  margin-bottom: 1.5rem;
-  max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.hero .lead {
-  font-size: clamp(0.95rem, 2vw, 1.08rem);
-  line-height: 1.85;
-  color: rgba(255,255,255,0.65);
-  max-width: 540px;
-  margin: 0 auto 2.75rem;
-  font-weight: 300;
-}
-.hero-meta {
-  margin-top: 1.25rem;
-  font-size: 0.73rem;
-  color: rgba(255,255,255,0.28);
-  letter-spacing: 0.08em;
-}
+    /* ── EMAIL SECTION ── */
+    .email-section {
+      background: var(--primary);
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    .email-section h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--white);
+      margin-bottom: 0.65rem;
+      font-weight: 400;
+    }
+    .email-section p.email-intro {
+      color: rgba(255,255,255,0.55);
+      font-size: 0.9rem;
+      max-width: 420px;
+      margin: 0 auto 1.75rem;
+      line-height: 1.75;
+    }
+    .privacy {
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.25);
+      margin-top: 1.25rem;
+    }
 
-/* ── BODY SECTIONS ─────────────────────────────────── */
-.section {
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 4.5rem 1.5rem;
-}
-.section h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.45rem, 3.2vw, 2rem);
-  color: var(--primary);
-  margin-bottom: 1.25rem;
-  font-weight: 400;
-  line-height: 1.32;
-}
-.section p {
-  font-size: 0.97rem;
-  line-height: 1.9;
-  color: var(--text);
-  margin-bottom: 1.1rem;
-}
-.section p:last-of-type { margin-bottom: 0; }
+    /* ── MAILERLITE FORMS ── */
+    [id^="mlb2-"].ml-form-embedContainer {
+      box-sizing: border-box; display: table;
+      margin: 0 auto; position: static; width: 100% !important;
+    }
+    [id^="mlb2-"].ml-form-embedContainer h4,
+    [id^="mlb2-"].ml-form-embedContainer p,
+    [id^="mlb2-"].ml-form-embedContainer span,
+    [id^="mlb2-"].ml-form-embedContainer button {
+      text-transform: none !important; letter-spacing: normal !important;
+    }
+    [id^="mlb2-"].ml-form-embedContainer .ml-form-embedWrapper {
+      background-color: #ffffff; border-radius: 4px;
+      box-sizing: border-box; display: inline-block !important;
+      margin: 0; padding: 0; position: relative;
+    }
+    [id^="mlb2-"].ml-form-embedContainer .ml-form-embedWrapper.embedForm {
+      max-width: 440px; width: 100%;
+    }
+    [id^="mlb2-"].ml-form-embedContainer .ml-form-align-center { text-align: center; }
+    [id^="mlb2-"].ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody,
+    [id^="mlb2-"].ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody {
+      padding: 20px 20px 0 20px;
+    }
+    [id^="mlb2-"] .ml-form-embedBody .ml-form-embedContent { display: none; }
+    [id^="mlb2-"].ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody form {
+      margin: 0; width: 100%;
+    }
+    [id^="mlb2-"].ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent {
+      margin: 0 0 20px 0; width: 100%;
+    }
+    [id^="mlb2-"].ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow {
+      margin: 0 0 10px 0; width: 100%;
+    }
+    [id^="mlb2-"].ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input {
+      background-color: #fff !important; color: #333 !important;
+      border-color: #ccc; border-radius: 4px !important;
+      border-style: solid !important; border-width: 1px !important;
+      font-family: 'Inter', Arial, sans-serif; font-size: 14px !important;
+      height: auto; line-height: 21px !important; margin: 0;
+      padding: 12px 10px !important; width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    [id^="mlb2-"].ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit {
+      margin: 0 0 20px 0; float: left; width: 100%;
+    }
+    [id^="mlb2-"].ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button {
+      background-color: #3D2636 !important; border: none !important;
+      border-radius: 0 !important; box-shadow: none !important;
+      color: #fff !important; cursor: pointer;
+      font-family: 'Inter', Arial, sans-serif !important;
+      font-size: 0.88rem !important; font-weight: 500 !important;
+      line-height: 21px !important; height: auto;
+      padding: 12px !important; width: 100% !important;
+      box-sizing: border-box !important; letter-spacing: 0.05em;
+    }
+    [id^="mlb2-"].ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover {
+      background-color: #8E4F63 !important;
+    }
+    [id^="mlb2-"].ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4 {
+      color: #3D2636; font-family: 'Playfair Display', serif; font-size: 1.2rem;
+      font-weight: 400; margin: 0 0 10px 0; text-align: center;
+    }
+    [id^="mlb2-"].ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p {
+      color: #555; font-family: 'Inter', Arial, sans-serif; font-size: 0.9rem;
+      text-align: center; padding-bottom: 1rem;
+    }
+    .ml-form-embedSubmitLoad {
+      display: inline-block; width: 20px; height: 20px;
+    }
+    .ml-form-embedSubmitLoad:after {
+      content: " "; display: block; width: 11px; height: 11px; margin: 1px;
+      border-radius: 50%; border: 4px solid #fff;
+      border-color: #fff #fff #fff transparent;
+      animation: ml-form-embedSubmitLoad 1.2s linear infinite;
+    }
+    @keyframes ml-form-embedSubmitLoad {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0;
+      margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;
+    }
+    .ml-error input, .ml-error textarea { border-color: red !important; }
+    .ml-error label:first-child { color: #ff0000 !important; }
 
-/* ── HONEST SECTION (dark bg) ──────────────────────── */
-.honest-section {
-  background: var(--primary);
-  color: var(--white);
-  padding: 4.5rem 1.5rem;
-  text-align: center;
-}
-.honest-section h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.45rem, 3.2vw, 2rem);
-  font-weight: 400;
-  margin-bottom: 2rem;
-  line-height: 1.3;
-}
-.honest-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
-  max-width: 640px;
-  margin: 0 auto 2.5rem;
-}
-.honest-card {
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-top: 3px solid var(--accent);
-  border-radius: 2px;
-  padding: 1.75rem 1.5rem;
-  text-align: left;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.28), 0 1px 6px rgba(0,0,0,0.18);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.honest-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.38), 0 2px 8px rgba(0,0,0,0.22);
-}
-.honest-card .label {
-  font-size: 0.62rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 0.85rem;
-  display: block;
-}
-.honest-card p {
-  font-size: 0.91rem;
-  line-height: 1.78;
-  color: rgba(255,255,255,0.78);
-}
-@media (max-width: 480px) {
-  .honest-grid { grid-template-columns: 1fr; max-width: 440px; }
-}
+    /* ── FOOTER ── */
+    .site-footer {
+      background: var(--text);
+      color: rgba(255,255,255,0.32);
+      text-align: center;
+      padding: 1.75rem 1.5rem;
+      font-size: 0.74rem;
+      letter-spacing: 0.04em;
+      line-height: 1.9;
+    }
+    .site-footer a { color: rgba(255,255,255,0.42); text-decoration: none; }
+    .site-footer a:hover { color: rgba(255,255,255,0.72); }
 
-/* ── FIND GRID ─────────────────────────────────────── */
-.find-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
-  gap: 1.25rem;
-  margin-top: 1.75rem;
-  margin-bottom: 2.25rem;
-}
-.find-card {
-  background: var(--card);
-  padding: 1.5rem 1.4rem;
-  border-top: 3px solid var(--accent);
-}
-.find-card h4 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1rem;
-  color: var(--primary);
-  font-weight: 400;
-  margin-bottom: 0.6rem;
-}
-.find-card p {
-  font-size: 0.88rem;
-  line-height: 1.72;
-  color: var(--text);
-  margin: 0;
-}
-
-/* ── BEFORE/AFTER ──────────────────────────────────── */
-.before-after-section {
-  background: var(--card);
-  padding: 4.5rem 1.5rem;
-}
-.before-after-inner {
-  max-width: 680px;
-  margin: 0 auto;
-}
-.before-after-inner h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.45rem, 3.2vw, 2rem);
-  color: var(--primary);
-  margin-bottom: 1rem;
-  font-weight: 400;
-  line-height: 1.32;
-}
-.before-after-inner > p {
-  font-size: 0.97rem;
-  line-height: 1.9;
-  color: var(--text);
-  margin-bottom: 2.5rem;
-}
-.example {
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid var(--border);
-}
-.example:last-of-type { border-bottom: none; margin-bottom: 1.5rem; }
-.example-label {
-  font-size: 0.62rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--text);
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-.before-after-pair {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-.ba-box {
-  padding: 1.1rem 1.2rem;
-  font-size: 0.9rem;
-  line-height: 1.72;
-}
-.ba-box.before {
-  background: var(--white);
-  border-left: 3px solid var(--soft);
-  color: #9A8580;
-  font-style: italic;
-}
-.ba-box.after {
-  background: var(--white);
-  border-left: 3px solid var(--accent);
-  color: var(--text);
-}
-.ba-tag {
-  font-size: 0.6rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-  font-style: normal;
-}
-.ba-tag.before-tag { color: var(--soft); }
-.ba-tag.after-tag { color: var(--accent); }
-
-/* ── PRODUCTS SECTION ──────────────────────────────── */
-.products-section {
-  background: var(--bg);
-  padding: 5rem 1.5rem;
-  text-align: center;
-}
-.products-inner {
-  max-width: 800px;
-  margin: 0 auto;
-}
-.products-inner h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.45rem, 3.2vw, 2rem);
-  color: var(--primary);
-  margin-bottom: 0.85rem;
-  font-weight: 400;
-  line-height: 1.32;
-}
-.products-inner > p {
-  font-size: 0.97rem;
-  line-height: 1.9;
-  color: var(--text);
-  margin-bottom: 3rem;
-  max-width: 560px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-  text-align: left;
-}
-.product-card {
-  background: var(--white);
-  border: 1.5px solid var(--border);
-  border-top: 4px solid var(--accent);
-  padding: 2.25rem 2rem;
-  display: flex;
-  flex-direction: column;
-}
-.product-card .product-tag {
-  font-size: 0.62rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 0.75rem;
-  display: block;
-  font-weight: 500;
-}
-.product-card h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.25rem;
-  color: var(--primary);
-  font-weight: 400;
-  margin-bottom: 0.75rem;
-  line-height: 1.3;
-}
-.product-card .product-desc {
-  font-size: 0.91rem;
-  line-height: 1.78;
-  color: var(--text);
-  margin-bottom: 1.5rem;
-  flex: 1;
-}
-.product-card .product-includes {
-  list-style: none;
-  margin-bottom: 1.75rem;
-}
-.product-card .product-includes li {
-  font-size: 0.84rem;
-  line-height: 1.75;
-  color: var(--text);
-  padding-left: 1.1rem;
-  position: relative;
-}
-.product-card .product-includes li::before {
-  content: '✓';
-  position: absolute;
-  left: 0;
-  color: var(--accent);
-  font-size: 0.8rem;
-}
-.product-card .product-price {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.75rem;
-  color: var(--primary);
-  margin-bottom: 1rem;
-}
-.product-card .product-cta {
-  background: var(--accent);
-  color: var(--white);
-  border: none;
-  padding: 0.9rem 1.75rem;
-  font-size: 0.88rem;
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  cursor: pointer;
-  transition: background 0.2s;
-  text-decoration: none;
-  display: block;
-  text-align: center;
-}
-.product-card .product-cta:hover { background: var(--hover); }
-.product-card .product-secondary-link {
-  display: block;
-  text-align: center;
-  margin-top: 0.85rem;
-  font-size: 0.8rem;
-  color: var(--accent);
-  text-decoration: none;
-  letter-spacing: 0.03em;
-}
-.product-card .product-secondary-link:hover { color: var(--hover); }
-
-.bundle-card {
-  background: var(--primary);
-  border: none;
-  border-top: 4px solid var(--accent);
-  padding: 2.25rem 2rem;
-  margin-top: 0.5rem;
-  text-align: center;
-  max-width: 560px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.bundle-card .bundle-tag {
-  font-size: 0.62rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 0.75rem;
-  display: block;
-  font-weight: 500;
-}
-.bundle-card h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.35rem;
-  color: var(--white);
-  font-weight: 400;
-  margin-bottom: 0.6rem;
-  line-height: 1.3;
-}
-.bundle-card p {
-  font-size: 0.88rem;
-  color: rgba(255,255,255,0.58);
-  line-height: 1.75;
-  margin-bottom: 1.25rem;
-}
-.bundle-card .bundle-price {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  color: var(--white);
-  margin-bottom: 0.3rem;
-}
-.bundle-card .bundle-savings {
-  font-size: 0.78rem;
-  color: var(--accent);
-  margin-bottom: 1.25rem;
-  font-weight: 500;
-}
-.bundle-card .product-cta {
-  background: var(--accent);
-  color: var(--white);
-  border: none;
-  padding: 0.9rem 2rem;
-  font-size: 0.88rem;
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  cursor: pointer;
-  transition: background 0.2s;
-  text-decoration: none;
-  display: inline-block;
-}
-.bundle-card .product-cta:hover { background: var(--hover); }
-
-/* ── FREE GUIDE SECTION ────────────────────────────── */
-.guide-section {
-  background: var(--card);
-  padding: 4.5rem 1.5rem;
-  text-align: center;
-}
-.guide-inner {
-  max-width: 520px;
-  margin: 0 auto;
-}
-.guide-inner h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.45rem, 3.2vw, 2rem);
-  color: var(--primary);
-  margin-bottom: 1rem;
-  font-weight: 400;
-  line-height: 1.32;
-}
-.guide-inner p {
-  font-size: 0.95rem;
-  line-height: 1.85;
-  color: var(--text);
-  margin-bottom: 1.75rem;
-}
-.guide-form {
-  display: flex;
-  gap: 0.5rem;
-  max-width: 440px;
-  margin: 0 auto 0.85rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.guide-form input[type="email"] {
-  flex: 1;
-  min-width: 210px;
-  padding: 0.85rem 1rem;
-  border: 1.5px solid var(--border);
-  font-size: 0.91rem;
-  font-family: 'Inter', sans-serif;
-  background: var(--white);
-  outline: none;
-  color: var(--text);
-}
-.guide-form input[type="email"]:focus { border-color: var(--accent); }
-.guide-form button {
-  background: var(--primary);
-  color: var(--white);
-  border: none;
-  padding: 0.85rem 1.5rem;
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  font-size: 0.88rem;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: background 0.2s;
-}
-.guide-form button:hover { background: var(--hover); }
-.guide-privacy {
-  font-size: 0.7rem;
-  color: var(--soft);
-  margin-bottom: 0 !important;
-}
-
-/* ── CLOSING CTA ───────────────────────────────────── */
-.cta-band {
-  background: var(--primary);
-  color: var(--white);
-  text-align: center;
-  padding: 5rem 1.5rem;
-}
-.cta-band h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.5rem, 3.5vw, 2.3rem);
-  font-weight: 400;
-  margin-bottom: 1rem;
-  line-height: 1.2;
-}
-.cta-band p {
-  color: rgba(255,255,255,0.58);
-  font-size: 0.95rem;
-  max-width: 420px;
-  margin: 0 auto 2.25rem;
-  line-height: 1.8;
-}
-
-/* ── FOOTER ────────────────────────────────────────── */
-.site-footer {
-  background: var(--text);
-  color: rgba(255,255,255,0.32);
-  padding: 2.5rem 2rem 2rem;
-  font-size: 0.78rem;
-}
-.footer-inner {
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding-bottom: 1.75rem;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-  margin-bottom: 1.25rem;
-}
-.footer-brand {
-  font-family: 'Playfair Display', serif;
-  color: rgba(255,255,255,0.55);
-  font-size: 1rem;
-  font-weight: 400;
-}
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1.5rem;
-  list-style: none;
-}
-.footer-links a {
-  color: rgba(255,255,255,0.38);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-.footer-links a:hover { color: rgba(255,255,255,0.7); }
-.footer-copy {
-  text-align: center;
-  font-size: 0.72rem;
-  color: rgba(255,255,255,0.25);
-  line-height: 1.8;
-}
-.footer-copy a { color: rgba(255,255,255,0.32); text-decoration: none; }
-.footer-copy a:hover { color: rgba(255,255,255,0.6); }
-
-@media (max-width: 600px) {
-  .site-nav { padding: 1rem 1.25rem; gap: 1rem; }
-  .nav-links { gap: 1rem; }
-  .hero { padding: 4rem 1.25rem 4rem; }
-  .before-after-pair { grid-template-columns: 1fr; }
-  .btn-row { flex-direction: column; align-items: flex-start; }
-  .products-grid { grid-template-columns: 1fr; }
-}
-</style>
+    @media (max-width: 480px) {
+      .site-nav { padding: 1rem 1.25rem; }
+      .nav-links { gap: 1rem; }
+      .quiz-nav { flex-direction: column-reverse; gap: 1rem; }
+      .btn-next { width: 100%; text-align: center; }
+    }
+  </style>
 </head>
 <body>
 
-<!-- ── NAV ──────────────────────────────────────────────── -->
+<!-- ── NAV ── -->
 <nav class="site-nav">
   <a href="/" class="nav-brand">Katharine Blythe</a>
   <ul class="nav-links">
@@ -684,164 +485,772 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
   </ul>
 </nav>
 
-<!-- ── HERO ─────────────────────────────────────────────── -->
-<section class="hero">
-  <p class="eyebrow">The Invisible Work Method</p>
-  <h1>Your career break has a story. Your resume may not know how to tell it yet.</h1>
-  <p class="lead">The years you spent away from paid work were not empty. But not every experience translates the same way. The Invisible Work Quiz helps you see what your years away actually built — and whether your next step is translation, a bridge, or both.</p>
-  <a href="/invisible-work" class="btn-primary">Take the Invisible Work Quiz — Free</a>
-  <p class="hero-meta">9 questions &nbsp;·&nbsp; 2 minutes &nbsp;·&nbsp; Clear next step</p>
+<!-- ── LANDING ── -->
+<section id="landing">
+  <p class="eyebrow">The Invisible Work Quiz</p>
+  <h1>Your career break has a story.</h1>
+  <p class="lead">Find out what it built — and what your resume needs to do next.</p>
+  <button class="btn-primary" onclick="startQuiz()">Take the Quiz — It's Free</button>
+  <p class="landing-meta">9 questions &nbsp;·&nbsp; 2 minutes &nbsp;·&nbsp; Clear next step</p>
 </section>
 
-<!-- ── SECTION 1: WHO THIS IS FOR ───────────────────────── -->
-<div class="section">
-  <h2>For women who have been working the whole time.</h2>
-  <p>You raised children, cared for family, built things, volunteered, taught, organized, navigated systems nobody thanked you for. You kept more moving than anyone counted.</p>
-  <p>The professional world does not always know how to read that. It is a translation problem — and it is solvable.</p>
-</div>
-
-<div class="divider"></div>
-
-<!-- ── SECTION 2: THE HONEST PART ───────────────────────── -->
-<div class="honest-section">
-  <h2>Not every career break needs the same next step.</h2>
-  <div class="honest-grid">
-    <div class="honest-card">
-      <span class="label">You have the experience.<br>Now you need the language.</span>
-      <p>What you did during your time away is more transferable than you think. The work is learning how to say it in language a hiring manager recognizes.</p>
-    </div>
-    <div class="honest-card">
-      <span class="label">You have the years.<br>Now you need one thing on paper.</span>
-      <p>Your gap may be too significant to bridge with language alone. One bridge step — a volunteer role, short contract, or certification — will get you there faster.</p>
-    </div>
+<!-- ── QUIZ ── -->
+<section id="quiz">
+  <div class="quiz-header">
+    <span class="quiz-brand">Katharine Blythe</span>
+    <span class="quiz-progress-label" id="progress-label">Question 1 of 9</span>
   </div>
-</div>
-
-<!-- ── SECTION 3: BEFORE / AFTER ────────────────────────── -->
-<div class="before-after-section">
-  <div class="before-after-inner">
-    <h2>Invisible work becomes clearer when it is translated.</h2>
-    <p>A career break does not need to be explained with a long personal story. Often, the work is to identify what happened, name the professional skill underneath it, and decide whether the resume has enough proof to support it.</p>
-
-    <div class="example">
-      <p class="example-label">Volunteer Work</p>
-      <div class="before-after-pair">
-        <div class="ba-box before">
-          <p class="ba-tag before-tag">Before</p>
-          "I ran the school fundraiser for three years."
-        </div>
-        <div class="ba-box after">
-          <p class="ba-tag after-tag">After</p>
-          Coordinated the school's annual fundraiser over three years, managing volunteers, event logistics, and day-of operations.
-        </div>
-      </div>
-    </div>
-
-    <div class="example">
-      <p class="example-label">Caregiving and Systems Navigation</p>
-      <div class="before-after-pair">
-        <div class="ba-box before">
-          <p class="ba-tag before-tag">Before</p>
-          "I helped my parent through a difficult medical period."
-        </div>
-        <div class="ba-box after">
-          <p class="ba-tag after-tag">After</p>
-          Managed care coordination across multiple providers over an extended period, including scheduling, insurance communication, and follow-up.
-        </div>
-      </div>
-    </div>
-
-    <div class="example">
-      <p class="example-label">Creative Work</p>
-      <div class="before-after-pair">
-        <div class="ba-box before">
-          <p class="ba-tag before-tag">Before</p>
-          "I ran a small Etsy shop."
-        </div>
-        <div class="ba-box after">
-          <p class="ba-tag after-tag">After</p>
-          Managed end-to-end e-commerce operation including product development, photography, copywriting, customer communication, order fulfillment, and performance tracking.
-        </div>
-      </div>
-    </div>
-
+  <div class="progress-track">
+    <div class="progress-fill" id="progress-fill" style="width:10%"></div>
   </div>
-</div>
-
-<!-- ── SECTION 5: PRODUCTS ───────────────────────────────── -->
-<section class="products-section">
-  <div class="products-inner">
-    <p class="section-label">The method, in full</p>
-    <h2>Two tools. One path back.</h2>
-    <p>The quiz tells you which lane you are in. These tools are what you use to move forward from there.</p>
-
-    <div class="products-grid">
-      <!-- RESUME KIT -->
-      <div class="product-card">
-        <span class="product-tag">Translation Lane</span>
-        <h3>The Invisible Work Resume Kit</h3>
-        <p class="product-desc">Your experience is ready. This kit gives you the language to put it on paper — archetype bullet banks, gap framing, a gap-friendly resume structure, and four interview scripts.</p>
-        <ul class="product-includes">
-          <li>Guidebook + Fillable Workbook</li>
-          <li>Bullet banks for all 6 archetypes</li>
-          <li>Gap Framing Guide + Resume structure</li>
-          <li>Four interview scripts</li>
-        </ul>
-          <a href="/resume-kit" class="product-cta">See What's Inside →</a>
-      </div>
-
-      <!-- BRIDGE PATH -->
-      <div class="product-card">
-        <span class="product-tag">Bridge Lane</span>
-        <h3>The Bridge Path Planner</h3>
-        <p class="product-desc">Your resume needs something current first. This planner shows you exactly what proof points you are missing — and how to build them strategically before you apply.</p>
-        <ul class="product-includes">
-          <li>Bridge level assessment</li>
-          <li>Job posting analysis guide</li>
-          <li>Proof point menu + 90-day plan</li>
-          <li>Reference strategy guide</li>
-        </ul>
-          <a href="/bridge-path" class="product-cta">See What's Inside →</a>
-      </div>
-    </div>
-
-    <!-- BUNDLE -->
-    <div class="bundle-card">
-      <span class="bundle-tag">The Full Bundle</span>
-      <h3>Resume Kit + Bridge Path Planner</h3>
-      <p>Both tools. Every framework. For when you want all of it ready — or you are not sure yet which lane you are in.</p>
-      <!-- REPLACE href WITH YOUR GUMROAD BUNDLE LINK -->
-      <a href="https://gumroad.com/YOUR_BUNDLE_LINK" class="product-cta">Get the Bundle</a>
-    </div>
+  <div class="question-wrapper">
+    <p class="q-label" id="q-label">Question 1</p>
+    <p class="q-transition" id="q-transition" style="display:none"></p>
+    <h2 class="q-text" id="q-text"></h2>
+    <ul class="options" id="options"></ul>
+  </div>
+  <div class="quiz-nav">
+    <button class="btn-back" id="btn-back" onclick="prevQ()">← Back</button>
+    <button class="btn-next" id="btn-next" onclick="nextQ()" disabled>Continue →</button>
   </div>
 </section>
 
-<!-- ── SECTION 6: CLOSING ─────────────────────────────────── -->
-<div class="cta-band">
-  <h2>Wherever you are in this is the right place to start.</h2>
-  <p>The quiz takes two minutes. You will walk away with your archetype, your lane, and the 60-Minute Resume Reset — a free inventory guide that helps you see what your years away actually built before you write a single word of resume language.</p>
-  <div class="btn-row">
-    <a href="/invisible-work" class="btn-primary">Take the Quiz — Free</a>
+<!-- ── RESULTS ── -->
+<section id="results">
+  <div class="results-hero">
+    <div class="badge-row">
+      <span class="archetype-badge" id="r-archetype-badge"></span>
+      <span class="lane-badge" id="r-lane-badge"></span>
+    </div>
+    <h2 id="r-title"></h2>
+    <p class="tagline" id="r-tagline"></p>
   </div>
-</div>
-
-<!-- ── FOOTER ─────────────────────────────────────────────── -->
-<footer class="site-footer">
-  <div class="footer-inner">
-    <span class="footer-brand">Katharine Blythe</span>
-    <ul class="footer-links">
-      <li><a href="/">Home</a></li>
-      <li><a href="/invisible-work">Take the Quiz</a></li>
-      <li><a href="/resume-kit">Resume Kit</a></li>
-      <li><a href="/bridge-path">Bridge Path</a></li>
-      <li><a href="/about">About</a></li>
-    </ul>
+  <div class="results-body">
+    <div class="result-block">
+      <h3>Who you are</h3>
+      <p id="r-identity"></p>
+    </div>
+    <div class="result-block">
+      <h3>What has been getting in the way</h3>
+      <p id="r-shadow"></p>
+    </div>
+    <div class="result-block">
+      <h3>What it actually translates to</h3>
+      <p id="r-flip"></p>
+    </div>
+    <div class="next-move">
+      <h3>Your next move</h3>
+      <p id="r-next"></p>
+      <a href="#" class="btn-kit" id="r-cta">Get the Resume Kit →</a>
+    </div>
   </div>
-  <div class="footer-copy">
-    <p>© 2026 Katharine Blythe. All rights reserved. · Katharine Blythe is a pen name. The method is real.</p>
+
+  <!-- ── EMAIL: MAILERLITE FORMS ── -->
+  <div class="email-section">
+    <h3>Get your free guide delivered to your inbox</h3>
+    <p class="email-intro">Enter your email and we'll send you the free 60-Minute Invisible Work Resume Reset, along with guidance specific to your archetype and your path.</p>
+
+    <div id="ml-forms-container">
+
+      <!-- Builder -->
+      <div id="ml-form-builder" style="display:none">
+        <div id="mlb2-41693780" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-41693780">
+          <div class="ml-form-align-center">
+            <div class="ml-form-embedWrapper embedForm">
+              <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                <div class="ml-form-embedContent"></div>
+                <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2308803/forms/188283489802520000/subscribe" data-code="" method="post" target="_blank">
+                  <div class="ml-form-formContent">
+                    <div class="ml-form-fieldRow ml-last-item">
+                      <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                        <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Your email address" autocomplete="email">
+                      </div>
+                    </div>
+                  </div>
+                  <input type="hidden" name="ml-submit" value="1">
+                  <div class="ml-form-embedSubmit">
+                    <button type="submit" class="primary">Email Me My Results →</button>
+                    <button disabled="disabled" style="display:none" type="button" class="loading"><div class="ml-form-embedSubmitLoad"></div><span class="sr-only">Loading...</span></button>
+                  </div>
+                  <input type="hidden" name="anticsrf" value="true">
+                </form>
+              </div>
+              <div class="ml-form-successBody row-success" style="display:none">
+                <div class="ml-form-successContent">
+                  <h4>Check your inbox.</h4>
+                  <p>Your free guide is on its way.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Operator -->
+      <div id="ml-form-operator" style="display:none">
+        <div id="mlb2-41693946" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-41693946">
+          <div class="ml-form-align-center">
+            <div class="ml-form-embedWrapper embedForm">
+              <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                <div class="ml-form-embedContent"></div>
+                <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2308803/forms/188284185845171209/subscribe" data-code="" method="post" target="_blank">
+                  <div class="ml-form-formContent">
+                    <div class="ml-form-fieldRow ml-last-item">
+                      <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                        <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Your email address" autocomplete="email">
+                      </div>
+                    </div>
+                  </div>
+                  <input type="hidden" name="ml-submit" value="1">
+                  <div class="ml-form-embedSubmit">
+                    <button type="submit" class="primary">Email Me My Results →</button>
+                    <button disabled="disabled" style="display:none" type="button" class="loading"><div class="ml-form-embedSubmitLoad"></div><span class="sr-only">Loading...</span></button>
+                  </div>
+                  <input type="hidden" name="anticsrf" value="true">
+                </form>
+              </div>
+              <div class="ml-form-successBody row-success" style="display:none">
+                <div class="ml-form-successContent">
+                  <h4>Check your inbox.</h4>
+                  <p>Your free guide is on its way.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Implementer -->
+      <div id="ml-form-implementer" style="display:none">
+        <div id="mlb2-41694058" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-41694058">
+          <div class="ml-form-align-center">
+            <div class="ml-form-embedWrapper embedForm">
+              <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                <div class="ml-form-embedContent"></div>
+                <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2308803/forms/188284509494445394/subscribe" data-code="" method="post" target="_blank">
+                  <div class="ml-form-formContent">
+                    <div class="ml-form-fieldRow ml-last-item">
+                      <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                        <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Your email address" autocomplete="email">
+                      </div>
+                    </div>
+                  </div>
+                  <input type="hidden" name="ml-submit" value="1">
+                  <div class="ml-form-embedSubmit">
+                    <button type="submit" class="primary">Email Me My Results →</button>
+                    <button disabled="disabled" style="display:none" type="button" class="loading"><div class="ml-form-embedSubmitLoad"></div><span class="sr-only">Loading...</span></button>
+                  </div>
+                  <input type="hidden" name="anticsrf" value="true">
+                </form>
+              </div>
+              <div class="ml-form-successBody row-success" style="display:none">
+                <div class="ml-form-successContent">
+                  <h4>Check your inbox.</h4>
+                  <p>Your free guide is on its way.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mentor -->
+      <div id="ml-form-mentor" style="display:none">
+        <div id="mlb2-41693883" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-41693883">
+          <div class="ml-form-align-center">
+            <div class="ml-form-embedWrapper embedForm">
+              <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                <div class="ml-form-embedContent"></div>
+                <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2308803/forms/188283974830786146/subscribe" data-code="" method="post" target="_blank">
+                  <div class="ml-form-formContent">
+                    <div class="ml-form-fieldRow ml-last-item">
+                      <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                        <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Your email address" autocomplete="email">
+                      </div>
+                    </div>
+                  </div>
+                  <input type="hidden" name="ml-submit" value="1">
+                  <div class="ml-form-embedSubmit">
+                    <button type="submit" class="primary">Email Me My Results →</button>
+                    <button disabled="disabled" style="display:none" type="button" class="loading"><div class="ml-form-embedSubmitLoad"></div><span class="sr-only">Loading...</span></button>
+                  </div>
+                  <input type="hidden" name="anticsrf" value="true">
+                </form>
+              </div>
+              <div class="ml-form-successBody row-success" style="display:none">
+                <div class="ml-form-successContent">
+                  <h4>Check your inbox.</h4>
+                  <p>Your free guide is on its way.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Advocate -->
+      <div id="ml-form-advocate" style="display:none">
+        <div id="mlb2-41694122" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-41694122">
+          <div class="ml-form-align-center">
+            <div class="ml-form-embedWrapper embedForm">
+              <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                <div class="ml-form-embedContent"></div>
+                <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2308803/forms/188284735724717884/subscribe" data-code="" method="post" target="_blank">
+                  <div class="ml-form-formContent">
+                    <div class="ml-form-fieldRow ml-last-item">
+                      <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                        <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Your email address" autocomplete="email">
+                      </div>
+                    </div>
+                  </div>
+                  <input type="hidden" name="ml-submit" value="1">
+                  <div class="ml-form-embedSubmit">
+                    <button type="submit" class="primary">Email Me My Results →</button>
+                    <button disabled="disabled" style="display:none" type="button" class="loading"><div class="ml-form-embedSubmitLoad"></div><span class="sr-only">Loading...</span></button>
+                  </div>
+                  <input type="hidden" name="anticsrf" value="true">
+                </form>
+              </div>
+              <div class="ml-form-successBody row-success" style="display:none">
+                <div class="ml-form-successContent">
+                  <h4>Check your inbox.</h4>
+                  <p>Your free guide is on its way.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Maker -->
+      <div id="ml-form-maker" style="display:none">
+        <div id="mlb2-41694147" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-41694147">
+          <div class="ml-form-align-center">
+            <div class="ml-form-embedWrapper embedForm">
+              <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                <div class="ml-form-embedContent"></div>
+                <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2308803/forms/188284810546906520/subscribe" data-code="" method="post" target="_blank">
+                  <div class="ml-form-formContent">
+                    <div class="ml-form-fieldRow ml-last-item">
+                      <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                        <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Your email address" autocomplete="email">
+                      </div>
+                    </div>
+                  </div>
+                  <input type="hidden" name="ml-submit" value="1">
+                  <div class="ml-form-embedSubmit">
+                    <button type="submit" class="primary">Email Me My Results →</button>
+                    <button disabled="disabled" style="display:none" type="button" class="loading"><div class="ml-form-embedSubmitLoad"></div><span class="sr-only">Loading...</span></button>
+                  </div>
+                  <input type="hidden" name="anticsrf" value="true">
+                </form>
+              </div>
+              <div class="ml-form-successBody row-success" style="display:none">
+                <div class="ml-form-successContent">
+                  <h4>Check your inbox.</h4>
+                  <p>Your free guide is on its way.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bridge Path -->
+      <div id="ml-form-bridge" style="display:none">
+        <div id="mlb2-41694164" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-41694164">
+          <div class="ml-form-align-center">
+            <div class="ml-form-embedWrapper embedForm">
+              <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                <div class="ml-form-embedContent"></div>
+                <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2308803/forms/188284875092002704/subscribe" data-code="" method="post" target="_blank">
+                  <div class="ml-form-formContent">
+                    <div class="ml-form-fieldRow ml-last-item">
+                      <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                        <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Your email address" autocomplete="email">
+                      </div>
+                    </div>
+                  </div>
+                  <input type="hidden" name="ml-submit" value="1">
+                  <div class="ml-form-embedSubmit">
+                    <button type="submit" class="primary">Email Me My Results →</button>
+                    <button disabled="disabled" style="display:none" type="button" class="loading"><div class="ml-form-embedSubmitLoad"></div><span class="sr-only">Loading...</span></button>
+                  </div>
+                  <input type="hidden" name="anticsrf" value="true">
+                </form>
+              </div>
+              <div class="ml-form-successBody row-success" style="display:none">
+                <div class="ml-form-successContent">
+                  <h4>Check your inbox.</h4>
+                  <p>Your free guide is on its way.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /ml-forms-container -->
+    <p class="privacy">No spam. Unsubscribe at any time. Your information stays private.</p>
   </div>
-</footer>
 
+  <footer class="site-footer">
+    <p>© 2026 Katharine Blythe &nbsp;·&nbsp;
+      <a href="/">Home</a> &nbsp;·&nbsp;
+      <a href="/resume-kit">Resume Kit</a> &nbsp;·&nbsp;
+      <a href="/bridge-path">Bridge Path</a> &nbsp;·&nbsp;
+      <a href="/about">About</a> &nbsp;·&nbsp;
+      Katharine Blythe is a pen name. The method is real.
+    </p>
+  </footer>
+</section>
 
+<!-- ── JAVASCRIPT ── -->
+<script>
+
+// ── QUESTIONS ──────────────────────────────────────────────
+const QUESTIONS = [
+  {
+    id: 1,
+    text: "During your time away from paid work, which of these best describes the work you were still doing — even if no one was calling it work?",
+    shuffle: true,
+    options: [
+      { text: "I started or built something that did not exist before — a fundraising campaign, parent group, neighborhood effort, school program, nonprofit project, or community initiative that I helped launch from scratch.", arc: "builder" },
+      { text: "I stepped into an existing organization — a church committee, school council, sports league, or nonprofit — and made it actually function. Schedules, logistics, volunteers, communications — that was me.", arc: "operator" },
+      { text: "I showed up week after week and did the hands-on work — setting up, breaking down, staffing events, delivering meals, sorting donations, following through on whatever was needed.", arc: "implementer" },
+      { text: "I taught, tutored, coached, or guided others in an ongoing structured way — music lessons, reading programs, youth sports, community workshops, or something similar.", arc: "mentor" },
+      { text: "I navigated systems on behalf of someone else — fighting for a child's IEP, managing a parent's healthcare, dealing with insurance companies, schools, legal processes, or social services until I got results.", arc: "advocate" },
+      { text: "I created things — writing, design, photography, a blog, newsletter, Etsy shop, social media account, creative business, or other work that exists and can be seen.", arc: "maker" },
+      { text: "Honestly, most of my time was at home. I don't have much involvement in external organizations or projects to point to.", arc: "start" }
+    ]
+  },
+  {
+    id: 2,
+    text: "When you were part of any group, organization, or community — paid or unpaid — what role did you naturally end up in?",
+    shuffle: true,
+    options: [
+      { text: "I spotted what was missing, recruited people, found funding, and made the whole thing happen.", arc: "builder" },
+      { text: "I created the sign-up sheets, managed the volunteers, sent the reminders, and kept the operation from falling apart.", arc: "operator" },
+      { text: "I showed up every week without being asked, set up the chairs, stayed late to clean up, and never dropped the ball.", arc: "implementer" },
+      { text: "Newer members or younger people came to me when they needed help understanding something or figuring out what to do.", arc: "mentor" },
+      { text: "I knew how to push when the system was not cooperating — making the calls, writing the letters, and keeping going until it was resolved.", arc: "advocate" },
+      { text: "I designed the flyer, wrote the newsletter, photographed the event, or built the social media presence everyone else relied on.", arc: "maker" },
+      { text: "I wasn't really part of any groups or organizations during my time away. Most of what I did was private, at home, or just keeping things running for my family — and I don't have much external involvement to draw from.", arc: "lane_b" }
+    ]
+  },
+  {
+    id: 3,
+    text: "What kind of problem pulls your attention without anyone asking you to fix it?",
+    shuffle: true,
+    options: [
+      { text: "An obvious gap — a service, program, or resource that should exist in my community but does not, and I am already thinking about how to start it.", arc: "builder" },
+      { text: "A disorganized process — the kind where things fall through the cracks because nobody has built a system, and I am already sketching one in my head.", arc: "operator" },
+      { text: "An uncovered task — something that clearly needs to be done and no one is doing, so I just start doing it.", arc: "implementer" },
+      { text: "Someone struggling to understand something I could explain clearly in five minutes if I had the chance.", arc: "mentor" },
+      { text: "Someone not getting what they need or are entitled to — a child whose school is not providing the right support, a family member lost in the healthcare system, or someone being treated unfairly by an institution.", arc: "advocate" },
+      { text: "Something that looks or reads wrong — a poorly designed flyer, a confusing message, a piece of communication that is not doing its job.", arc: "maker" }
+    ]
+  },
+  {
+    id: 4,
+    text: "What do people tend to ask you to help with — in your family, community, or volunteer work?",
+    shuffle: true,
+    options: [
+      { text: "Starting something — organizing a neighborhood effort, launching a fundraiser, getting a new group or program off the ground.", arc: "builder" },
+      { text: "Getting organized — building a system, figuring out the right process, or knowing what needs to happen and in what order.", arc: "operator" },
+      { text: "Showing up — because they know that if they ask me, I will follow through and not leave the work half done.", arc: "implementer" },
+      { text: "Thinking something through — help understanding a complicated situation, talking through a decision, or figuring out what to do next.", arc: "mentor" },
+      { text: "Dealing with institutions — schools, hospitals, insurance companies, landlords, legal processes — when they do not know where to start or have already hit a wall.", arc: "advocate" },
+      { text: "Making something — writing the email, designing the graphic, photographing the event, drafting the proposal, or putting together the thing nobody else knows how to produce.", arc: "maker" }
+    ]
+  },
+  {
+    id: 5,
+    text: "When you picture yourself back in a professional role, what feels most like you?",
+    shuffle: true,
+    options: [
+      { text: "Building something new — launching a program, growing a team, or creating something from the ground up that did not exist before.", arc: "builder" },
+      { text: "Running something well — managing the moving parts, building the processes, and making sure an existing operation actually works the way it should.", arc: "operator" },
+      { text: "Being the reliable person who executes — the one who shows up, does the work, follows through, and can be counted on every single time.", arc: "implementer" },
+      { text: "Working with people — coaching them, training them, helping them develop, or supporting them through something they are figuring out.", arc: "mentor" },
+      { text: "Solving complex problems for people — navigating systems, coordinating across multiple parties, advocating for an outcome, and not stopping until it is resolved.", arc: "advocate" },
+      { text: "Doing creative or communications work — writing, designing, producing content, or building something tangible that other people read, use, or respond to.", arc: "maker" }
+    ]
+  },
+  {
+    id: 6,
+    text: "Do you currently have anything recent and outside your household that someone could point to and say, \"Yes, she did this\"?",
+    shuffle: false,
+    options: [
+      { text: "Yes — I have paid work, freelance, contract, or internship experience from the last few years.", arc: "lane_t" },
+      { text: "Yes — I have volunteer, board, committee, or community work that is external, ongoing or recent, and verifiable.", arc: "lane_t" },
+      { text: "Partially — I have experience but I am not sure it is recent enough or looks professional enough to put on a resume.", arc: "lane_b" },
+      { text: "Not really — most of what I did was at home and I do not have much that is external, recent, or verifiable.", arc: "lane_b" },
+      { text: "I am not sure — I have things I did during my time away but I genuinely do not know if they count.", arc: "lane_b" }
+    ]
+  },
+  {
+    id: 7,
+    text: "What has happened so far when you have tried to move back toward paid work?",
+    shuffle: false,
+    transition: "A few final questions so your result can be as useful as possible.",
+    options: [
+      { text: "I have not started applying yet — I am still in the preparation stage.", arc: "status_not_started" },
+      { text: "I have applied but I am not getting interviews.", arc: "status_no_interviews" },
+      { text: "I am getting interviews but not offers.", arc: "status_no_offers" },
+      { text: "I have not started because I do not feel ready — the resume itself feels like the obstacle.", arc: "status_not_ready" },
+      { text: "I am not sure what kinds of roles to even apply for.", arc: "status_unclear_target" }
+    ]
+  },
+  {
+    id: 8,
+    text: "Is there anything from your career break that a potential employer could verify — a reference who would take a call, a portfolio you could share, a certificate you have completed, or documented volunteer or community work?",
+    shuffle: false,
+    options: [
+      { text: "Yes — I have references, a portfolio, certificates, or documented work I could point to today.", arc: "verify_yes" },
+      { text: "Mostly — though I am not certain it looks polished or professional enough.", arc: "verify_mostly" },
+      { text: "Some things, but they are old, informal, or difficult to document in a way a hiring manager would take seriously.", arc: "verify_thin" },
+      { text: "Not really. Most of what I did was private, at home, or not the kind of thing that comes with documentation or references.", arc: "verify_no" },
+      { text: "I am genuinely not sure. I may have more than I think — I just do not know how to assess it yet.", arc: "verify_unsure" }
+    ]
+  },
+  {
+    id: 9,
+    text: "How long have you been away from paid full-time work?",
+    shuffle: false,
+    options: [
+      { text: "2–5 years",          arc: "gap_2_5" },
+      { text: "5–10 years",         arc: "gap_5_10" },
+      { text: "10–20 years",        arc: "gap_10_20" },
+      { text: "More than 20 years", arc: "gap_20_plus" }
+    ]
+  }
+];
+
+// ── ARCHETYPES ─────────────────────────────────────────────
+const ARCHETYPES = {
+  builder: {
+    color:    '#A85F4F',
+    label:    'The Builder',
+    title:    'The Builder',
+    tagline:  'You created things that exist because you decided they should.',
+    identity: 'During your years away, you built something. A community program, a fundraising effort, a parent group, a nonprofit initiative — something that required you to see a gap, decide to fill it, and then actually do the work of making it real. You recruited people, found resources, kept it running, and probably never once called it entrepreneurship. But that is what it was.',
+    shadow:   'You have likely described what you did as volunteering, or helping out, or simply being involved. That framing may have felt safer — if you do not claim it as significant, no one can tell you it is not. But the work was significant. The fact that it was unpaid changes your financial history. It does not change what you built, or what building it required of you.',
+    flip:     'In professional terms, what you did is called program development, organizational leadership, or entrepreneurship. The skills that make someone effective in a founding or growth role — identifying a gap, mobilizing resources, building something functional from nothing — are exactly the skills you have been practicing. A hiring manager looking for that profile will recognize it, once your resume is written to show it clearly.',
+    next: {
+      translation: 'Your resume may be underselling the very experience that could get you to the interview. What you built deserves to be presented the way a hiring manager actually reads it — not minimized, not explained away. The Resume Kit gives you archetype-specific bullet language to frame your initiative, leadership, and outcomes as credible, resume-ready experience.',
+      bridge:      'Your instincts are clearly Builder. What your resume needs now is one recent, external proof point that documents it — a formal board role, a new initiative with recorded outcomes, a project management or nonprofit certification, or a short contract. The Bridge Path Planner helps you identify the most efficient proof point for where you want to go.'
+    }
+  },
+  operator: {
+    color:    '#77616D',
+    label:    'The Operator',
+    title:    'The Operator',
+    tagline:  'Things ran because you were there. That is not a small thing.',
+    identity: 'You stepped into organizations that already existed and made them function. Logistics, coordination, systems, follow-through — you were the person who ensured that what was supposed to happen, happened. Your contribution was often invisible in the way that all infrastructure is invisible: unnoticed until it fails. You kept it from failing.',
+    shadow:   'The work you did rarely came with recognition. You were not the person at the front of the room — you were the person who made sure the room was ready, the materials were prepared, and everything held together. It is easy to look back at that kind of contribution and undervalue it, particularly when you are trying to explain your years away to a hiring manager who is looking for titles and metrics.',
+    flip:     'Operations, program management, and chief-of-staff-style roles exist precisely for people who can make complex things function reliably. These are not supporting roles — they are central ones. Organizations that run well do so because someone understands how to hold the moving pieces together. You have been doing exactly that work. The Resume Kit helps you frame it in language that hiring managers recognize.',
+    next: {
+      translation: 'The work you did — coordination, systems, logistics, follow-through — maps directly to program management, operations, and administrative leadership roles. Your resume just needs to name it that way. The Resume Kit gives you the language and templates to make that translation.',
+      bridge:      'You have the instincts of someone who makes organizations run. To strengthen your case, you may benefit from one recent, external engagement where those instincts are on record — a committee coordination role, a volunteer operations position, a project management certification, or a short contract assignment. The Bridge Path Planner helps you identify what makes the most sense for the roles you want.'
+    }
+  },
+  implementer: {
+    color:    '#8A6A5A',
+    label:    'The Implementer',
+    title:    'The Implementer',
+    tagline:  'You did not just help. You made things happen.',
+    identity: 'During your years away, you showed up. Reliably. Consistently. Hands-on. You may not have been the one with the idea or the one building the system — but you were the one who made both of those things real on the ground. You staffed the events, sorted the donations, followed through on the tasks, supported the efforts, and never left something half done.',
+    shadow:   'You have probably described your contribution as "just helping." You were not in a leadership role, you did not have the title or the strategy, so it has not felt like something a hiring manager would take seriously. That framing is underselling something that is genuinely in demand. Reliable, consistent, accountable execution is harder to find than most organizations want to admit.',
+    flip:     'Operations support, program support, service delivery, event coordination, customer success, administrative roles — these positions exist precisely because reliable execution is not as common as it should be. You have a demonstrated track record of showing up and doing the work. That is evidence worth naming.',
+    next: {
+      translation: 'Your resume needs to communicate reliability and follow-through as professional strengths — not as supporting details. The Resume Kit gives you the language to translate your hands-on contributions into resume copy that gets you past the first screen.',
+      bridge:      'Your instincts are clear — you execute, you show up, you follow through. To put that on record in a verifiable way, you may benefit from one recent external engagement: a part-time position, a volunteer role with clear scope, an internship, a returnship, or a relevant professional certification. The Bridge Path Planner helps you identify the right proof point and build it efficiently.'
+    }
+  },
+  mentor: {
+    color:    '#C28A6A',
+    label:    'The Mentor',
+    title:    'The Mentor',
+    tagline:  'You have spent years developing people. That is a professional skill.',
+    identity: 'During your time away, you were the person others came to. Whether in a formal teaching role, a coaching capacity, a youth program, or simply as the person in your community whom people trusted to help them think through difficult things — you were developing people. You understood how to meet someone where they were, identify what they needed, and help them move forward.',
+    shadow:   'If someone asked whether your time away was professionally meaningful, you might hesitate. Teaching and coaching can feel soft by comparison to what you imagine hiring managers are looking for. That hesitation is understandable. It is also, to be direct about it, based on a misunderstanding of what organizations are actually trying to find.',
+    flip:     'Learning and development, people management, coaching, training design, and facilitation are not peripheral functions. They are roles organizations care deeply about and often struggle to fill well, precisely because the people who are genuinely good at developing others tend to have arrived there through experience, not just credentials.',
+    next: {
+      translation: 'The translation work is specific: not "I helped people" but "I designed and delivered a program that produced this result for these people over this period of time." The Resume Kit walks you through exactly how to write that sentence for your own experience.',
+      bridge:      'Your instincts are clearly Mentor. To make those instincts resume-ready, you may benefit from one recent, credible engagement — a formal training role, a structured coaching program, a recognized teaching or facilitation certificate, or a documented youth program position. The Bridge Path Planner helps you identify what will carry the most weight.'
+    }
+  },
+  advocate: {
+    color:    '#7A3D56',
+    label:    'The Advocate',
+    title:    'The Advocate',
+    tagline:  'You learned how institutions work — by making them move.',
+    identity: 'You spent years navigating systems on behalf of someone who needed you in their corner. Schools, hospitals, insurance companies, legal processes, social services — you became fluent in structures you never expected to encounter, because someone you cared about required it of you. You learned who to call, how to escalate, what language to use, how to document everything, and how to stay in it until something changed.',
+    shadow:   'What you went through felt entirely personal. You were not building a professional portfolio — you were showing up for someone who needed you. The idea that this experience carries professional relevance may not have occurred to you. I want to be direct: the skills you used were professional skills. Research, institutional navigation, stakeholder coordination, case documentation, outcome tracking.',
+    flip:     'Client services, case coordination, patient advocacy, healthcare navigation, compliance, stakeholder management — these fields are built around people who understand how to move through complex systems on behalf of others. You have done exactly that, often at a level of intensity that formal job descriptions do not fully capture.',
+    next: {
+      translation: 'The language matters. Not "I helped my family through a difficult period" — but "I managed a multi-institutional process involving healthcare, legal, and educational systems, coordinating across multiple stakeholders to document issues, escalate appropriately, and achieve specific outcomes." That sentence is in your experience. The Resume Kit helps you find it.',
+      bridge:      'Your experience navigating systems on behalf of others is real and substantial. To make it most legible on a resume, you may benefit from one recent, external engagement in a professional frame — a formal advocacy role, a nonprofit coordination position, a case management volunteer role, or a certification in healthcare navigation, social services, or legal support. The Bridge Path Planner helps you identify the right bridge for your target field.'
+    }
+  },
+  maker: {
+    color:    '#B98286',
+    label:    'The Maker',
+    title:    'The Maker',
+    tagline:  'You created a body of work. It is time to call it that.',
+    identity: 'During the years you were away from paid employment, you were making things. Writing, design, photography, craft, a small business, a newsletter, a social media presence — whatever form it took, you were producing work. Something exists because you made it. A body of work accumulated across years, while you may have told yourself it was a hobby, or a side project, or simply something you did.',
+    shadow:   'There is likely a voice that has told you this work does not qualify. That it was not serious enough, not corporate enough, not the right kind of output to present in a professional context. What a creative director, a content lead, or a communications manager sees when they look at a portfolio of real, consistent work is not where it was produced or whether it was paid. They see what was made, and whether the person can do it again.',
+    flip:     'Content strategy, brand communications, creative direction, marketing, design — these roles are filled by people who built their capabilities the way you built yours: over time, by making things and getting better at making things. The difference between their trajectory and yours is that they named it a career earlier. The Resume Kit shows you how to make that shift now.',
+    next: {
+      translation: 'You have a portfolio. You simply have not organized or framed it as one. The Resume Kit walks you through how to present your body of work as professional experience — including how to address the formal employment question without letting it overshadow what you actually produced.',
+      bridge:      'You have creative instincts and output that exists and can be shown. To strengthen your case for paid creative roles, you may benefit from one recent, professional-context project — a commissioned piece, a nonprofit communications role, a freelance assignment, a design or writing certificate, or a content portfolio built around a clear niche. The Bridge Path Planner helps you identify what will move the needle most for the roles you want.'
+    }
+  },
+  start: {
+    color:    '#9A7C86',
+    label:    'The Starting Line',
+    title:    'The Starting Line',
+    tagline:  'You are not behind. But your next move matters.',
+    identity: 'You may have arrived at this quiz wondering whether there was anything here for you. The years at home were full — children, household, everything that keeping a family functioning requires — but you are not certain that translates into something a hiring manager will take seriously. On that point, you are right to be cautious. Household management does not translate directly. Where I want to push back is on what you conclude from that.',
+    shadow:   'The story that the window has closed — that you have been away too long, that the world moved on while you stood still, that what you have to offer is no longer relevant — is a story. It feels like a fact, particularly when you are looking at job postings that seem written for someone twenty years younger. But it is not a fact. It is a fear. And fear is an unreliable narrator.',
+    flip:     'Successful returns after long gaps often have one thing in common: one recent, external, verifiable proof point. Sometimes that is a professional certification. Sometimes it is a volunteer role with documented scope. Sometimes it is a returnship, internship, or short contract. One thing changes the equation.',
+    next: {
+      bridge: 'Before the job search, there is one move to make. The most efficient path is usually one external, verifiable proof point: a volunteer project with real scope, a short-term role, a returnship, or a well-chosen professional certification in your target field. A certification can be exactly the right bridge — particularly in fields like project management, HR, healthcare, or operations where credentials carry real hiring weight. The Bridge Path Planner helps you figure out which option makes the most sense and how to position it once you have it.'
+    }
+  }
+};
+
+// ── STATE ──────────────────────────────────────────────────
+let current   = 0;
+const answers  = new Array(QUESTIONS.length).fill(null);
+const shuffled = [];
+
+// ── UTILITIES ──────────────────────────────────────────────
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+function scrollTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+
+// ── START ──────────────────────────────────────────────────
+function startQuiz() {
+  QUESTIONS.forEach(q => shuffled.push(q.shuffle ? shuffle(q.options) : q.options));
+  document.getElementById('landing').style.display = 'none';
+  document.getElementById('quiz').style.display    = 'block';
+  renderQ(0);
+  scrollTop();
+}
+
+// ── RENDER QUESTION ────────────────────────────────────────
+function renderQ(idx) {
+  const q    = QUESTIONS[idx];
+  const opts = shuffled[idx];
+  const tot  = QUESTIONS.length;
+
+  document.getElementById('q-label').textContent        = 'Question ' + (idx + 1);
+  document.getElementById('q-text').textContent         = q.text;
+  document.getElementById('progress-label').textContent = 'Question ' + (idx + 1) + ' of 9';
+  document.getElementById('progress-fill').style.width  = (((idx + 1) / tot) * 100) + '%';
+
+  const trans = document.getElementById('q-transition');
+  if (q.transition) {
+    trans.textContent  = q.transition;
+    trans.style.display = 'block';
+  } else {
+    trans.style.display = 'none';
+  }
+
+  const list = document.getElementById('options');
+  list.innerHTML = '';
+  opts.forEach(function(opt, i) {
+    const li = document.createElement('li');
+    li.className   = 'opt';
+    li.textContent = opt.text;
+    if (answers[idx] !== null && answers[idx].i === i) li.classList.add('chosen');
+    li.addEventListener('click', function() { pick(idx, i, opt); });
+    list.appendChild(li);
+  });
+
+  document.getElementById('btn-back').style.visibility = idx === 0 ? 'hidden' : 'visible';
+  const nb = document.getElementById('btn-next');
+  nb.disabled    = answers[idx] === null;
+  nb.textContent = idx === tot - 1 ? 'See My Results →' : 'Continue →';
+}
+
+// ── SELECT OPTION ──────────────────────────────────────────
+function pick(qIdx, optIdx, opt) {
+  answers[qIdx] = { i: optIdx, arc: opt.arc };
+  document.querySelectorAll('.opt').forEach(function(el, i) {
+    el.classList.toggle('chosen', i === optIdx);
+  });
+  document.getElementById('btn-next').disabled = false;
+}
+
+// ── NAVIGATION ─────────────────────────────────────────────
+function nextQ() {
+  if (answers[current] === null) return;
+  if (current < QUESTIONS.length - 1) { current++; renderQ(current); scrollTop(); }
+  else showResults();
+}
+function prevQ() {
+  if (current > 0) { current--; renderQ(current); scrollTop(); }
+}
+
+// ── SCORING ────────────────────────────────────────────────
+function calcResult() {
+  const archetypes = ['builder','operator','implementer','mentor','advocate','maker'];
+  const score      = { builder:0, operator:0, implementer:0, mentor:0, advocate:0, maker:0 };
+  let   startFlag  = false;
+  let   lane       = 'translation';
+
+  answers.forEach(function(ans, idx) {
+    if (!ans) return;
+    const arc = ans.arc;
+
+    if (idx === 5) {
+      if (arc === 'lane_b') lane = 'bridge';
+      return;
+    }
+    if (idx === 6) return;
+    if (idx === 7) {
+      if (arc === 'verify_thin' || arc === 'verify_no' || arc === 'verify_unsure') {
+        lane = 'bridge';
+      }
+      return;
+    }
+    if (idx === 8) return;
+
+    if (idx === 0) {
+      if (arc === 'start') { startFlag = true; return; }
+      if (score.hasOwnProperty(arc)) score[arc] += 2;
+      return;
+    }
+    if (idx === 1) {
+      if (arc === 'lane_b') { lane = 'bridge'; return; }
+      if (score.hasOwnProperty(arc)) score[arc] += 1;
+      return;
+    }
+    if (score.hasOwnProperty(arc)) score[arc] += 1;
+  });
+
+  const vals     = Object.values(score);
+  const maxScore = Math.max(...vals);
+  const total    = vals.reduce(function(a, b) { return a + b; }, 0);
+
+  if (startFlag && lane === 'bridge' && maxScore <= 2) {
+    return { archetype: 'start', lane: 'bridge' };
+  }
+  if (startFlag && maxScore >= 3) {
+    return { archetype: pickWinner(score, archetypes), lane: 'bridge' };
+  }
+  if (total === 0) return { archetype: 'start', lane: 'bridge' };
+
+  return { archetype: pickWinner(score, archetypes), lane: lane };
+}
+
+function pickWinner(score, archetypes) {
+  const maxScore = Math.max(...Object.values(score));
+  const tied     = archetypes.filter(function(k) { return score[k] === maxScore; });
+  if (tied.length === 1) return tied[0];
+  if (answers[4] && tied.includes(answers[4].arc)) return answers[4].arc;
+  if (answers[0] && tied.includes(answers[0].arc)) return answers[0].arc;
+  return tied[0];
+}
+
+// ── SHOW CORRECT MAILERLITE FORM ───────────────────────────
+function showForm(archetype, lane) {
+  var formMap = {
+    builder:     'ml-form-builder',
+    operator:    'ml-form-operator',
+    implementer: 'ml-form-implementer',
+    mentor:      'ml-form-mentor',
+    advocate:    'ml-form-advocate',
+    maker:       'ml-form-maker',
+    start:       'ml-form-bridge'
+  };
+  document.querySelectorAll('#ml-forms-container > div').forEach(function(el) {
+    el.style.display = 'none';
+  });
+  var key = (lane === 'bridge' || archetype === 'start') ? 'ml-form-bridge' : formMap[archetype];
+  var form = document.getElementById(key);
+  if (form) form.style.display = 'block';
+}
+
+// ── SHOW RESULTS ───────────────────────────────────────────
+function showResults() {
+  const result    = calcResult();
+  const archetype = result.archetype;
+  const lane      = result.lane;
+  const data      = ARCHETYPES[archetype];
+  const nextCopy  = data.next[lane] || data.next.bridge;
+
+  document.getElementById('results').style.setProperty('--archetype-color', data.color);
+
+  const arcBadge = document.getElementById('r-archetype-badge');
+  arcBadge.textContent         = data.label;
+  arcBadge.style.backgroundColor = data.color;
+
+  const laneBadge = document.getElementById('r-lane-badge');
+  if (archetype === 'start') {
+    laneBadge.textContent = 'Bridge Path';
+    laneBadge.className   = 'lane-badge lane-badge-b';
+  } else if (lane === 'translation') {
+    laneBadge.textContent = 'Translation Lane';
+    laneBadge.className   = 'lane-badge lane-badge-t';
+  } else {
+    laneBadge.textContent = 'Bridge Path';
+    laneBadge.className   = 'lane-badge lane-badge-b';
+  }
+
+  document.getElementById('r-title').textContent    = data.title;
+  document.getElementById('r-tagline').textContent  = data.tagline;
+  document.getElementById('r-identity').textContent = data.identity;
+  document.getElementById('r-shadow').textContent   = data.shadow;
+  document.getElementById('r-flip').textContent     = data.flip;
+  document.getElementById('r-next').textContent     = nextCopy;
+
+  const cta = document.getElementById('r-cta');
+  if (lane === 'bridge' || archetype === 'start') {
+    cta.textContent = 'Get the Bridge Path Planner →';
+    cta.href        = 'https://katharineblythe.gumroad.com/l/bridge-path';
+  } else {
+    cta.textContent = 'Get the Resume Kit →';
+    cta.href        = 'https://katharineblythe.gumroad.com/l/resume-kit';
+  }
+
+  showForm(archetype, lane);
+
+  document.getElementById('quiz').style.display    = 'none';
+  document.getElementById('results').style.display = 'block';
+  scrollTop();
+}
+
+</script>
+
+<!-- ── MAILERLITE ── -->
+<script>
+function ml_webform_success_41693780() { var $ = ml_jQuery || jQuery; $('.ml-subscribe-form-41693780 .row-success').show(); $('.ml-subscribe-form-41693780 .row-form').hide(); }
+function ml_webform_success_41693946() { var $ = ml_jQuery || jQuery; $('.ml-subscribe-form-41693946 .row-success').show(); $('.ml-subscribe-form-41693946 .row-form').hide(); }
+function ml_webform_success_41694058() { var $ = ml_jQuery || jQuery; $('.ml-subscribe-form-41694058 .row-success').show(); $('.ml-subscribe-form-41694058 .row-form').hide(); }
+function ml_webform_success_41693883() { var $ = ml_jQuery || jQuery; $('.ml-subscribe-form-41693883 .row-success').show(); $('.ml-subscribe-form-41693883 .row-form').hide(); }
+function ml_webform_success_41694122() { var $ = ml_jQuery || jQuery; $('.ml-subscribe-form-41694122 .row-success').show(); $('.ml-subscribe-form-41694122 .row-form').hide(); }
+function ml_webform_success_41694147() { var $ = ml_jQuery || jQuery; $('.ml-subscribe-form-41694147 .row-success').show(); $('.ml-subscribe-form-41694147 .row-form').hide(); }
+function ml_webform_success_41694164() { var $ = ml_jQuery || jQuery; $('.ml-subscribe-form-41694164 .row-success').show(); $('.ml-subscribe-form-41694164 .row-form').hide(); }
+</script>
+<script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b" type="text/javascript"></script>
+<script>
+fetch("https://assets.mailerlite.com/jsonp/2308803/forms/188283489802520000/takel");
+fetch("https://assets.mailerlite.com/jsonp/2308803/forms/188284185845171209/takel");
+fetch("https://assets.mailerlite.com/jsonp/2308803/forms/188284509494445394/takel");
+fetch("https://assets.mailerlite.com/jsonp/2308803/forms/188283974830786146/takel");
+fetch("https://assets.mailerlite.com/jsonp/2308803/forms/188284735724717884/takel");
+fetch("https://assets.mailerlite.com/jsonp/2308803/forms/188284810546906520/takel");
+fetch("https://assets.mailerlite.com/jsonp/2308803/forms/188284875092002704/takel");
+</script>
 </body>
 </html>
