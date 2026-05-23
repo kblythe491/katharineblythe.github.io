@@ -24,6 +24,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1778769");</style>
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -350,73 +351,105 @@
       margin-bottom: 0.65rem;
       font-weight: 400;
     }
-    .email-section p {
+    .email-section p.email-intro {
       color: rgba(255,255,255,0.55);
       font-size: 0.9rem;
       max-width: 420px;
       margin: 0 auto 1.75rem;
       line-height: 1.75;
     }
-    .email-form {
-      display: flex;
-      gap: 0.5rem;
-      max-width: 440px;
-      margin: 0 auto;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .email-form input[type="email"] {
-      flex: 1;
-      min-width: 210px;
-      padding: 0.85rem 1rem;
-      border: 1px solid rgba(255,255,255,0.2);
-      font-size: 0.91rem;
-      font-family: 'Inter', sans-serif;
-      background: rgba(255,255,255,0.08);
-      outline: none;
-      color: var(--white);
-    }
-    .email-form input[type="email"]::placeholder { color: rgba(255,255,255,0.35); }
-    .email-form input[type="email"]:focus { border-color: var(--accent); }
-    .email-form button {
-      background: var(--accent);
-      color: var(--white);
-      border: none;
-      padding: 0.85rem 1.5rem;
-      font-family: 'Inter', sans-serif;
-      font-weight: 500;
-      font-size: 0.88rem;
-      cursor: pointer;
-      white-space: nowrap;
-      transition: background 0.2s;
-    }
-    .email-form button:hover { background: var(--hover); }
-    .email-bonus-list {
-      list-style: none;
-      margin: 0 auto 1.75rem;
-      max-width: 380px;
-      text-align: left;
-    }
-    .email-bonus-list li {
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.62);
-      padding: 0.3rem 0;
-      padding-left: 1.25rem;
-      position: relative;
-      line-height: 1.6;
-    }
-    .email-bonus-list li::before {
-      content: '✓';
-      position: absolute;
-      left: 0;
-      color: var(--accent);
-      font-size: 0.8rem;
-    }
     .privacy {
       font-size: 0.7rem;
       color: rgba(255,255,255,0.25);
-      margin-top: 0.9rem;
+      margin-top: 1.25rem;
     }
+
+    /* ── MAILERLITE FORMS ── */
+    [id^="mlb2-"].ml-form-embedContainer {
+      box-sizing: border-box; display: table;
+      margin: 0 auto; position: static; width: 100% !important;
+    }
+    [id^="mlb2-"].ml-form-embedContainer h4,
+    [id^="mlb2-"].ml-form-embedContainer p,
+    [id^="mlb2-"].ml-form-embedContainer span,
+    [id^="mlb2-"].ml-form-embedContainer button {
+      text-transform: none !important; letter-spacing: normal !important;
+    }
+    [id^="mlb2-"].ml-form-embedContainer .ml-form-embedWrapper {
+      background-color: #ffffff; border-radius: 4px;
+      box-sizing: border-box; display: inline-block !important;
+      margin: 0; padding: 0; position: relative;
+    }
+    [id^="mlb2-"].ml-form-embedContainer .ml-form-embedWrapper.embedForm {
+      max-width: 440px; width: 100%;
+    }
+    [id^="mlb2-"].ml-form-embedContainer .ml-form-align-center { text-align: center; }
+    [id^="mlb2-"].ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody,
+    [id^="mlb2-"].ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody {
+      padding: 20px 20px 0 20px;
+    }
+    [id^="mlb2-"] .ml-form-embedBody .ml-form-embedContent { display: none; }
+    [id^="mlb2-"].ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody form {
+      margin: 0; width: 100%;
+    }
+    [id^="mlb2-"].ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent {
+      margin: 0 0 20px 0; width: 100%;
+    }
+    [id^="mlb2-"].ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow {
+      margin: 0 0 10px 0; width: 100%;
+    }
+    [id^="mlb2-"].ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input {
+      background-color: #fff !important; color: #333 !important;
+      border-color: #ccc; border-radius: 4px !important;
+      border-style: solid !important; border-width: 1px !important;
+      font-family: 'Inter', Arial, sans-serif; font-size: 14px !important;
+      height: auto; line-height: 21px !important; margin: 0;
+      padding: 12px 10px !important; width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    [id^="mlb2-"].ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit {
+      margin: 0 0 20px 0; float: left; width: 100%;
+    }
+    [id^="mlb2-"].ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button {
+      background-color: #3D2636 !important; border: none !important;
+      border-radius: 0 !important; box-shadow: none !important;
+      color: #fff !important; cursor: pointer;
+      font-family: 'Inter', Arial, sans-serif !important;
+      font-size: 0.88rem !important; font-weight: 500 !important;
+      line-height: 21px !important; height: auto;
+      padding: 12px !important; width: 100% !important;
+      box-sizing: border-box !important; letter-spacing: 0.05em;
+    }
+    [id^="mlb2-"].ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover {
+      background-color: #8E4F63 !important;
+    }
+    [id^="mlb2-"].ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4 {
+      color: #3D2636; font-family: 'Playfair Display', serif; font-size: 1.2rem;
+      font-weight: 400; margin: 0 0 10px 0; text-align: center;
+    }
+    [id^="mlb2-"].ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p {
+      color: #555; font-family: 'Inter', Arial, sans-serif; font-size: 0.9rem;
+      text-align: center; padding-bottom: 1rem;
+    }
+    .ml-form-embedSubmitLoad {
+      display: inline-block; width: 20px; height: 20px;
+    }
+    .ml-form-embedSubmitLoad:after {
+      content: " "; display: block; width: 11px; height: 11px; margin: 1px;
+      border-radius: 50%; border: 4px solid #fff;
+      border-color: #fff #fff #fff transparent;
+      animation: ml-form-embedSubmitLoad 1.2s linear infinite;
+    }
+    @keyframes ml-form-embedSubmitLoad {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0;
+      margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;
+    }
+    .ml-error input, .ml-error textarea { border-color: red !important; }
+    .ml-error label:first-child { color: #ff0000 !important; }
 
     /* ── FOOTER ── */
     .site-footer {
@@ -508,25 +541,255 @@
     <div class="next-move">
       <h3>Your next move</h3>
       <p id="r-next"></p>
-      <!-- UPDATE THESE WITH YOUR GUMROAD LINKS BEFORE LAUNCH -->
-      <a href="https://gumroad.com/YOUR_RESUME_KIT_LINK" class="btn-kit" id="r-cta">Get the Resume Kit →</a>
     </div>
   </div>
 
-  <!-- ── EMAIL: RESULTS + BONUS PROMPTS ── -->
+  <!-- ── EMAIL: MAILERLITE FORMS ── -->
   <div class="email-section">
-    <h3>Get your results and your free 60-Minute Resume Reset</h3>
-    <p>Enter your email and we'll send you your personalized results, three bonus resume prompts written specifically for your archetype, and the free 60-Minute Invisible Work Resume Reset — the inventory guide that shows you what your years away actually built.</p>
-    <ul class="email-bonus-list">
-      <li>Your full quiz results, saved and delivered</li>
-      <li>Three archetype-specific bonus resume prompts</li>
-      <li>The free 60-Minute Resume Reset guide</li>
-    </ul>
-    <!-- REPLACE WITH YOUR BEEHIIV / CONVERTKIT EMBED — tag: quiz_results_email -->
-    <form class="email-form" id="email-form" onsubmit="handleEmail(event)">
-      <input type="email" placeholder="Your email address" required autocomplete="email" />
-      <button type="submit">Email Me My Results</button>
-    </form>
+    <h3>Get your free guide delivered to your inbox</h3>
+    <p class="email-intro">Enter your email and we'll send you the free 60-Minute Invisible Work Resume Reset, along with guidance specific to your archetype and your path.</p>
+
+    <div id="ml-forms-container">
+
+      <!-- Builder -->
+      <div id="ml-form-builder" style="display:none">
+        <div id="mlb2-41693780" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-41693780">
+          <div class="ml-form-align-center">
+            <div class="ml-form-embedWrapper embedForm">
+              <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                <div class="ml-form-embedContent"></div>
+                <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2308803/forms/188283489802520000/subscribe" data-code="" method="post" target="_blank">
+                  <div class="ml-form-formContent">
+                    <div class="ml-form-fieldRow ml-last-item">
+                      <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                        <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Your email address" autocomplete="email">
+                      </div>
+                    </div>
+                  </div>
+                  <input type="hidden" name="ml-submit" value="1">
+                  <div class="ml-form-embedSubmit">
+                    <button type="submit" class="primary">Send Me the Free Guide →</button>
+                    <button disabled="disabled" style="display:none" type="button" class="loading"><div class="ml-form-embedSubmitLoad"></div><span class="sr-only">Loading...</span></button>
+                  </div>
+                  <input type="hidden" name="anticsrf" value="true">
+                </form>
+              </div>
+              <div class="ml-form-successBody row-success" style="display:none">
+                <div class="ml-form-successContent">
+                  <h4>Check your inbox.</h4>
+                  <p>Your free guide is on its way.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Operator -->
+      <div id="ml-form-operator" style="display:none">
+        <div id="mlb2-41693946" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-41693946">
+          <div class="ml-form-align-center">
+            <div class="ml-form-embedWrapper embedForm">
+              <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                <div class="ml-form-embedContent"></div>
+                <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2308803/forms/188284185845171209/subscribe" data-code="" method="post" target="_blank">
+                  <div class="ml-form-formContent">
+                    <div class="ml-form-fieldRow ml-last-item">
+                      <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                        <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Your email address" autocomplete="email">
+                      </div>
+                    </div>
+                  </div>
+                  <input type="hidden" name="ml-submit" value="1">
+                  <div class="ml-form-embedSubmit">
+                    <button type="submit" class="primary">Send Me the Free Guide →</button>
+                    <button disabled="disabled" style="display:none" type="button" class="loading"><div class="ml-form-embedSubmitLoad"></div><span class="sr-only">Loading...</span></button>
+                  </div>
+                  <input type="hidden" name="anticsrf" value="true">
+                </form>
+              </div>
+              <div class="ml-form-successBody row-success" style="display:none">
+                <div class="ml-form-successContent">
+                  <h4>Check your inbox.</h4>
+                  <p>Your free guide is on its way.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Implementer -->
+      <div id="ml-form-implementer" style="display:none">
+        <div id="mlb2-41694058" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-41694058">
+          <div class="ml-form-align-center">
+            <div class="ml-form-embedWrapper embedForm">
+              <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                <div class="ml-form-embedContent"></div>
+                <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2308803/forms/188284509494445394/subscribe" data-code="" method="post" target="_blank">
+                  <div class="ml-form-formContent">
+                    <div class="ml-form-fieldRow ml-last-item">
+                      <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                        <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Your email address" autocomplete="email">
+                      </div>
+                    </div>
+                  </div>
+                  <input type="hidden" name="ml-submit" value="1">
+                  <div class="ml-form-embedSubmit">
+                    <button type="submit" class="primary">Send Me the Free Guide →</button>
+                    <button disabled="disabled" style="display:none" type="button" class="loading"><div class="ml-form-embedSubmitLoad"></div><span class="sr-only">Loading...</span></button>
+                  </div>
+                  <input type="hidden" name="anticsrf" value="true">
+                </form>
+              </div>
+              <div class="ml-form-successBody row-success" style="display:none">
+                <div class="ml-form-successContent">
+                  <h4>Check your inbox.</h4>
+                  <p>Your free guide is on its way.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mentor -->
+      <div id="ml-form-mentor" style="display:none">
+        <div id="mlb2-41693883" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-41693883">
+          <div class="ml-form-align-center">
+            <div class="ml-form-embedWrapper embedForm">
+              <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                <div class="ml-form-embedContent"></div>
+                <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2308803/forms/188283974830786146/subscribe" data-code="" method="post" target="_blank">
+                  <div class="ml-form-formContent">
+                    <div class="ml-form-fieldRow ml-last-item">
+                      <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                        <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Your email address" autocomplete="email">
+                      </div>
+                    </div>
+                  </div>
+                  <input type="hidden" name="ml-submit" value="1">
+                  <div class="ml-form-embedSubmit">
+                    <button type="submit" class="primary">Send Me the Free Guide →</button>
+                    <button disabled="disabled" style="display:none" type="button" class="loading"><div class="ml-form-embedSubmitLoad"></div><span class="sr-only">Loading...</span></button>
+                  </div>
+                  <input type="hidden" name="anticsrf" value="true">
+                </form>
+              </div>
+              <div class="ml-form-successBody row-success" style="display:none">
+                <div class="ml-form-successContent">
+                  <h4>Check your inbox.</h4>
+                  <p>Your free guide is on its way.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Advocate -->
+      <div id="ml-form-advocate" style="display:none">
+        <div id="mlb2-41694122" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-41694122">
+          <div class="ml-form-align-center">
+            <div class="ml-form-embedWrapper embedForm">
+              <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                <div class="ml-form-embedContent"></div>
+                <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2308803/forms/188284735724717884/subscribe" data-code="" method="post" target="_blank">
+                  <div class="ml-form-formContent">
+                    <div class="ml-form-fieldRow ml-last-item">
+                      <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                        <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Your email address" autocomplete="email">
+                      </div>
+                    </div>
+                  </div>
+                  <input type="hidden" name="ml-submit" value="1">
+                  <div class="ml-form-embedSubmit">
+                    <button type="submit" class="primary">Send Me the Free Guide →</button>
+                    <button disabled="disabled" style="display:none" type="button" class="loading"><div class="ml-form-embedSubmitLoad"></div><span class="sr-only">Loading...</span></button>
+                  </div>
+                  <input type="hidden" name="anticsrf" value="true">
+                </form>
+              </div>
+              <div class="ml-form-successBody row-success" style="display:none">
+                <div class="ml-form-successContent">
+                  <h4>Check your inbox.</h4>
+                  <p>Your free guide is on its way.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Maker -->
+      <div id="ml-form-maker" style="display:none">
+        <div id="mlb2-41694147" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-41694147">
+          <div class="ml-form-align-center">
+            <div class="ml-form-embedWrapper embedForm">
+              <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                <div class="ml-form-embedContent"></div>
+                <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2308803/forms/188284810546906520/subscribe" data-code="" method="post" target="_blank">
+                  <div class="ml-form-formContent">
+                    <div class="ml-form-fieldRow ml-last-item">
+                      <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                        <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Your email address" autocomplete="email">
+                      </div>
+                    </div>
+                  </div>
+                  <input type="hidden" name="ml-submit" value="1">
+                  <div class="ml-form-embedSubmit">
+                    <button type="submit" class="primary">Send Me the Free Guide →</button>
+                    <button disabled="disabled" style="display:none" type="button" class="loading"><div class="ml-form-embedSubmitLoad"></div><span class="sr-only">Loading...</span></button>
+                  </div>
+                  <input type="hidden" name="anticsrf" value="true">
+                </form>
+              </div>
+              <div class="ml-form-successBody row-success" style="display:none">
+                <div class="ml-form-successContent">
+                  <h4>Check your inbox.</h4>
+                  <p>Your free guide is on its way.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bridge Path -->
+      <div id="ml-form-bridge" style="display:none">
+        <div id="mlb2-41694164" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-41694164">
+          <div class="ml-form-align-center">
+            <div class="ml-form-embedWrapper embedForm">
+              <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                <div class="ml-form-embedContent"></div>
+                <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2308803/forms/188284875092002704/subscribe" data-code="" method="post" target="_blank">
+                  <div class="ml-form-formContent">
+                    <div class="ml-form-fieldRow ml-last-item">
+                      <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                        <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Your email address" autocomplete="email">
+                      </div>
+                    </div>
+                  </div>
+                  <input type="hidden" name="ml-submit" value="1">
+                  <div class="ml-form-embedSubmit">
+                    <button type="submit" class="primary">Send Me the Free Guide →</button>
+                    <button disabled="disabled" style="display:none" type="button" class="loading"><div class="ml-form-embedSubmitLoad"></div><span class="sr-only">Loading...</span></button>
+                  </div>
+                  <input type="hidden" name="anticsrf" value="true">
+                </form>
+              </div>
+              <div class="ml-form-successBody row-success" style="display:none">
+                <div class="ml-form-successContent">
+                  <h4>Check your inbox.</h4>
+                  <p>Your free guide is on its way.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /ml-forms-container -->
     <p class="privacy">No spam. Unsubscribe at any time. Your information stays private.</p>
   </div>
 
@@ -848,41 +1111,29 @@ function calcResult() {
     if (!ans) return;
     const arc = ans.arc;
 
-    // Q6 (idx=5): primary lane determination
     if (idx === 5) {
       if (arc === 'lane_b') lane = 'bridge';
       return;
     }
-
-    // Q7 (idx=6): status — informational only
     if (idx === 6) return;
-
-    // Q8 (idx=7): verification — also sets lane if thin/no/unsure
     if (idx === 7) {
       if (arc === 'verify_thin' || arc === 'verify_no' || arc === 'verify_unsure') {
         lane = 'bridge';
       }
       return;
     }
-
-    // Q9 (idx=8): gap length — informational only
     if (idx === 8) return;
 
-    // Q1 (idx=0): primary archetype scoring (2 pts) or start flag
     if (idx === 0) {
       if (arc === 'start') { startFlag = true; return; }
       if (score.hasOwnProperty(arc)) score[arc] += 2;
       return;
     }
-
-    // Q2 (idx=1): check for bridge option (7th answer) or regular archetype
     if (idx === 1) {
       if (arc === 'lane_b') { lane = 'bridge'; return; }
       if (score.hasOwnProperty(arc)) score[arc] += 1;
       return;
     }
-
-    // Q3–Q5 (idx=2–4): archetype scoring (1 pt each)
     if (score.hasOwnProperty(arc)) score[arc] += 1;
   });
 
@@ -890,15 +1141,12 @@ function calcResult() {
   const maxScore = Math.max(...vals);
   const total    = vals.reduce(function(a, b) { return a + b; }, 0);
 
-  // Pure start: Q1 "start" answer, no other archetype signals, bridge lane
   if (startFlag && lane === 'bridge' && maxScore <= 2) {
     return { archetype: 'start', lane: 'bridge' };
   }
-  // Start flag but archetype emerged from Q3–Q5 — show archetype + bridge
   if (startFlag && maxScore >= 3) {
     return { archetype: pickWinner(score, archetypes), lane: 'bridge' };
   }
-  // No scoring at all
   if (total === 0) return { archetype: 'start', lane: 'bridge' };
 
   return { archetype: pickWinner(score, archetypes), lane: lane };
@@ -911,6 +1159,25 @@ function pickWinner(score, archetypes) {
   if (answers[4] && tied.includes(answers[4].arc)) return answers[4].arc;
   if (answers[0] && tied.includes(answers[0].arc)) return answers[0].arc;
   return tied[0];
+}
+
+// ── SHOW CORRECT MAILERLITE FORM ───────────────────────────
+function showForm(archetype, lane) {
+  var formMap = {
+    builder:     'ml-form-builder',
+    operator:    'ml-form-operator',
+    implementer: 'ml-form-implementer',
+    mentor:      'ml-form-mentor',
+    advocate:    'ml-form-advocate',
+    maker:       'ml-form-maker',
+    start:       'ml-form-bridge'
+  };
+  document.querySelectorAll('#ml-forms-container > div').forEach(function(el) {
+    el.style.display = 'none';
+  });
+  var key = (lane === 'bridge' || archetype === 'start') ? 'ml-form-bridge' : formMap[archetype];
+  var form = document.getElementById(key);
+  if (form) form.style.display = 'block';
 }
 
 // ── SHOW RESULTS ───────────────────────────────────────────
@@ -935,7 +1202,7 @@ function showResults() {
     laneBadge.textContent = 'Translation Lane';
     laneBadge.className   = 'lane-badge lane-badge-t';
   } else {
-    laneBadge.textContent = 'Bridge Lane';
+    laneBadge.textContent = 'Bridge Path';
     laneBadge.className   = 'lane-badge lane-badge-b';
   }
 
@@ -946,28 +1213,34 @@ function showResults() {
   document.getElementById('r-flip').textContent     = data.flip;
   document.getElementById('r-next').textContent     = nextCopy;
 
-  // Lane-based product CTA
-  const cta = document.getElementById('r-cta');
-  if (lane === 'bridge' || archetype === 'start') {
-    cta.textContent = 'Get the Bridge Path Planner →';
-    cta.href        = 'https://gumroad.com/YOUR_BRIDGE_PATH_LINK';
-  } else {
-    cta.textContent = 'Get the Resume Kit →';
-    cta.href        = 'https://gumroad.com/YOUR_RESUME_KIT_LINK';
-  }
+  showForm(archetype, lane);
 
   document.getElementById('quiz').style.display    = 'none';
   document.getElementById('results').style.display = 'block';
   scrollTop();
 }
 
-// ── EMAIL ──────────────────────────────────────────────────
-function handleEmail(e) {
-  e.preventDefault();
-  document.getElementById('email-form').innerHTML =
-    '<p style="color:rgba(255,255,255,0.85);font-size:1rem;font-weight:500;text-align:center;">You\'re in. Your results and bonus prompts are on their way.</p>';
-}
+</script>
 
+<!-- ── MAILERLITE ── -->
+<script>
+function ml_webform_success_41693780() { var $ = ml_jQuery || jQuery; $('.ml-subscribe-form-41693780 .row-success').show(); $('.ml-subscribe-form-41693780 .row-form').hide(); }
+function ml_webform_success_41693946() { var $ = ml_jQuery || jQuery; $('.ml-subscribe-form-41693946 .row-success').show(); $('.ml-subscribe-form-41693946 .row-form').hide(); }
+function ml_webform_success_41694058() { var $ = ml_jQuery || jQuery; $('.ml-subscribe-form-41694058 .row-success').show(); $('.ml-subscribe-form-41694058 .row-form').hide(); }
+function ml_webform_success_41693883() { var $ = ml_jQuery || jQuery; $('.ml-subscribe-form-41693883 .row-success').show(); $('.ml-subscribe-form-41693883 .row-form').hide(); }
+function ml_webform_success_41694122() { var $ = ml_jQuery || jQuery; $('.ml-subscribe-form-41694122 .row-success').show(); $('.ml-subscribe-form-41694122 .row-form').hide(); }
+function ml_webform_success_41694147() { var $ = ml_jQuery || jQuery; $('.ml-subscribe-form-41694147 .row-success').show(); $('.ml-subscribe-form-41694147 .row-form').hide(); }
+function ml_webform_success_41694164() { var $ = ml_jQuery || jQuery; $('.ml-subscribe-form-41694164 .row-success').show(); $('.ml-subscribe-form-41694164 .row-form').hide(); }
+</script>
+<script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b" type="text/javascript"></script>
+<script>
+fetch("https://assets.mailerlite.com/jsonp/2308803/forms/188283489802520000/takel");
+fetch("https://assets.mailerlite.com/jsonp/2308803/forms/188284185845171209/takel");
+fetch("https://assets.mailerlite.com/jsonp/2308803/forms/188284509494445394/takel");
+fetch("https://assets.mailerlite.com/jsonp/2308803/forms/188283974830786146/takel");
+fetch("https://assets.mailerlite.com/jsonp/2308803/forms/188284735724717884/takel");
+fetch("https://assets.mailerlite.com/jsonp/2308803/forms/188284810546906520/takel");
+fetch("https://assets.mailerlite.com/jsonp/2308803/forms/188284875092002704/takel");
 </script>
 </body>
 </html>
